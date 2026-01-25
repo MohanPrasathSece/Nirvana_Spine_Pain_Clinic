@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Healthcare-focused color palette */
+    --background: 210 20% 99%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Medical Blue Primary */
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light grey secondary */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Subtle blue accent */
+    --accent: 210 100% 97%;
+    --accent-foreground: 210 100% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom medical colors */
+    --medical-light: 210 100% 98%;
+    --medical-soft: 210 100% 95%;
+    --trust-blue: 210 100% 40%;
+    --calm-grey: 210 15% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-medical {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .card-medical {
+    @apply bg-card rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
