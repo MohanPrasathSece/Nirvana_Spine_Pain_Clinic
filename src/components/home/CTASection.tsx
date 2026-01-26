@@ -6,16 +6,16 @@ const CTASection = () => {
   return (
     <section className="section-padding bg-primary">
       <div className="container-medical text-center">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
           Don't Let Pain Control Your Life
         </h2>
         <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-          Take the first step towards a pain-free life. Schedule a consultation 
+          Take the first step towards a pain-free life. Schedule a consultation
           with Dr. Vamshi today and discover personalized treatment options.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" asChild className="gap-2">
-            <Link to="/contact">
+            <Link to="/contact#book-appointment">
               <Calendar className="w-5 h-5" />
               Book Appointment
             </Link>

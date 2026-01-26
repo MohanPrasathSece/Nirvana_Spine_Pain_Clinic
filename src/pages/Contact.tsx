@@ -94,172 +94,114 @@ const Contact = () => {
               Book Your Appointment
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Ready to take the first step towards a pain-free life? Contact us 
+              Ready to take the first step towards a pain-free life? Contact us
               to schedule a consultation with Dr. Vamshi.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="section-padding">
+      {/* Map & Contact Info Section */}
+      <section className="section-padding bg-secondary/30">
         <div className="container-medical">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {[
-              {
-                icon: Phone,
-                title: "Phone",
-                info: "+91 98765 43210",
-                subinfo: "Call for appointments",
-              },
-              {
-                icon: Mail,
-                title: "Email",
-                info: "info@nirvanaspine.com",
-                subinfo: "We reply within 24 hours",
-              },
-              {
-                icon: MapPin,
-                title: "Address",
-                info: "123 Healthcare Avenue",
-                subinfo: "Jubilee Hills, Hyderabad 500033",
-              },
-              {
-                icon: Clock,
-                title: "Working Hours",
-                info: "Mon - Sat: 9AM - 7PM",
-                subinfo: "Sunday: By Appointment",
-              },
-            ].map((item) => (
-              <div key={item.title} className="card-medical p-6 text-center">
-                <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-foreground font-medium">{item.info}</p>
-                <p className="text-sm text-muted-foreground">{item.subinfo}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 overflow-hidden rounded-3xl bg-card shadow-sm border border-border/50">
 
-          {/* Social Links */}
-          <div className="flex justify-center gap-4 mb-16">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-5 h-5" />
-            </a>
-          </div>
-
-          {/* Forms */}
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="card-medical p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <Send className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h2 className="font-heading text-xl font-semibold text-foreground">
-                    Send a Message
-                  </h2>
-                  <p className="text-sm text-muted-foreground">
-                    We'll respond as soon as possible
-                  </p>
-                </div>
-              </div>
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="contact-name">Full Name</Label>
-                  <Input
-                    id="contact-name"
-                    value={contactForm.name}
-                    onChange={(e) =>
-                      setContactForm({ ...contactForm, name: e.target.value })
-                    }
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="contact-email">Email Address</Label>
-                    <Input
-                      id="contact-email"
-                      type="email"
-                      value={contactForm.email}
-                      onChange={(e) =>
-                        setContactForm({ ...contactForm, email: e.target.value })
-                      }
-                      placeholder="your@email.com"
-                      required
-                    />
+            {/* Left: Contact Details */}
+            <div className="p-8 lg:p-12 flex flex-col justify-center space-y-8">
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
+                  Get in Touch
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                      <MapPin className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-foreground mb-1">Visit Us</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        123 Healthcare Avenue, Jubilee Hills,
+                        <br />
+                        Hyderabad, Telangana 500033
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <Label htmlFor="contact-phone">Phone Number</Label>
-                    <Input
-                      id="contact-phone"
-                      type="tel"
-                      value={contactForm.phone}
-                      onChange={(e) =>
-                        setContactForm({ ...contactForm, phone: e.target.value })
-                      }
-                      placeholder="+91 98765 43210"
-                    />
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                      <Phone className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-foreground mb-1">Call Us</h3>
+                      <p className="text-muted-foreground mb-1">Mon-Sat from 9am to 7pm</p>
+                      <a href="tel:+919876543210" className="text-primary font-medium hover:underline">
+                        +91 98765 43210
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                      <Mail className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-foreground mb-1">Email Us</h3>
+                      <p className="text-muted-foreground mb-1">Our team is here to help.</p>
+                      <a href="mailto:info@nirvanaspine.com" className="text-primary font-medium hover:underline">
+                        info@nirvanaspine.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                      <Clock className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-foreground mb-1">Working Hours</h3>
+                      <p className="text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                      <p className="text-muted-foreground">Sunday: By Appointment</p>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <Label htmlFor="contact-message">Message</Label>
-                  <Textarea
-                    id="contact-message"
-                    value={contactForm.message}
-                    onChange={(e) =>
-                      setContactForm({ ...contactForm, message: e.target.value })
-                    }
-                    placeholder="How can we help you?"
-                    rows={4}
-                    required
-                  />
+              </div>
+
+              {/* Social Links Embedded */}
+              <div className="pt-6 border-t border-border/50">
+                <p className="font-medium mb-4 text-foreground/80">Follow us on social media</p>
+                <div className="flex gap-4">
+                  {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+                    <a
+                      key={i}
+                      href="#"
+                      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  ))}
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+              </div>
             </div>
 
+            {/* Right: Map */}
+            <div className="h-[400px] lg:h-auto w-full bg-secondary relative min-h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3711518715855!2d78.41155671487756!3d17.43517098804678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90ce7e1b7e89%3A0x6a5c3d2e1d2f7c3b!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1629794729807!5m2!1sen!2sin"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Clinic Location"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Forms */}
+      <section id="book-appointment" className="section-padding">
+        <div className="container-medical">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Appointment Form */}
             <div className="card-medical p-8">
               <div className="flex items-center gap-3 mb-6">
@@ -386,6 +328,80 @@ const Contact = () => {
                 </Button>
               </form>
             </div>
+
+            {/* Contact Form */}
+            <div className="card-medical p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
+                  <Send className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h2 className="font-heading text-xl font-semibold text-foreground">
+                    Send a Message
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    We'll respond as soon as possible
+                  </p>
+                </div>
+              </div>
+              <form onSubmit={handleContactSubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="contact-name">Full Name</Label>
+                  <Input
+                    id="contact-name"
+                    value={contactForm.name}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, name: e.target.value })
+                    }
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="contact-email">Email Address</Label>
+                    <Input
+                      id="contact-email"
+                      type="email"
+                      value={contactForm.email}
+                      onChange={(e) =>
+                        setContactForm({ ...contactForm, email: e.target.value })
+                      }
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="contact-phone">Phone Number</Label>
+                    <Input
+                      id="contact-phone"
+                      type="tel"
+                      value={contactForm.phone}
+                      onChange={(e) =>
+                        setContactForm({ ...contactForm, phone: e.target.value })
+                      }
+                      placeholder="+91 98765 43210"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="contact-message">Message</Label>
+                  <Textarea
+                    id="contact-message"
+                    value={contactForm.message}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, message: e.target.value })
+                    }
+                    placeholder="How can we help you?"
+                    rows={4}
+                    required
+                  />
+                </div>
+                <Button type="submit" className="w-full">
+                  Send Message
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -414,20 +430,6 @@ const Contact = () => {
             </Accordion>
           </div>
         </div>
-      </section>
-
-      {/* Map */}
-      <section className="h-96 bg-secondary">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3711518715855!2d78.41155671487756!3d17.43517098804678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90ce7e1b7e89%3A0x6a5c3d2e1d2f7c3b!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1629794729807!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Clinic Location - Jubilee Hills, Hyderabad"
-        />
       </section>
     </Layout>
   );

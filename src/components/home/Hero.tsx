@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-hospital.jpg";
+import heroImage from "@/assets/hero.jpg";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           alt="Spine specialist treating patient"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
       </div>
 
       {/* Content */}
@@ -22,18 +22,18 @@ const Hero = () => {
           <p className="text-primary font-medium mb-4 animate-fade-in">
             Welcome to Nirvana Spine & Pain Clinic
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Expert Spine Care.{" "}
             <span className="text-primary">Pain-Free Living.</span>
           </h1>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Experience relief from chronic pain with Dr. Vamshi's specialized 
-            treatment. Advanced techniques for back pain, neck pain, and 
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Experience relief from chronic pain with Dr. Vamshi's specialized
+            treatment. Advanced techniques for back pain, neck pain, and
             spine conditions in Hyderabad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button size="lg" asChild className="gap-2">
-              <Link to="/contact">
+              <Link to="/contact#book-appointment">
                 <Calendar className="w-5 h-5" />
                 Book Appointment
               </Link>
@@ -57,7 +57,7 @@ const Hero = () => {
                 <p className="text-3xl md:text-4xl font-heading font-bold text-primary">
                   {stat.value}
                 </p>
-                <p className="text-sm text-primary-foreground/70 mt-1">{stat.label}</p>
+                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
               </div>
             ))}
           </div>

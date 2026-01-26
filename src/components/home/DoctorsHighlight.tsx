@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, GraduationCap, Clock } from "lucide-react";
-import doctorPortrait from "@/assets/doctor-portrait.jpg";
+const doctorPortrait = "/image/procedure-3.jpg";
 
 const DoctorsHighlight = () => {
   return (
     <section className="section-padding bg-accent">
       <div className="container-medical">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-1 w-full">
             <img
               src={doctorPortrait}
               alt="Dr. Vamshi - Spine Specialist"
@@ -22,7 +22,7 @@ const DoctorsHighlight = () => {
           </div>
 
           {/* Content */}
-          <div>
+          <div className="order-2 lg:order-2">
             <p className="text-primary font-medium mb-2">Meet Your Specialist</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
               Dr. Vamshi
@@ -31,9 +31,9 @@ const DoctorsHighlight = () => {
               Spine & Pain Management Specialist
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Dr. Vamshi is a renowned spine specialist in Hyderabad with over 
-              15 years of experience in treating complex spine conditions and 
-              chronic pain. He combines advanced interventional techniques with 
+              Dr. Vamshi is a renowned spine specialist in Hyderabad with over
+              15 years of experience in treating complex spine conditions and
+              chronic pain. He combines advanced interventional techniques with
               a patient-centered approach to deliver lasting relief.
             </p>
 
@@ -74,7 +74,7 @@ const DoctorsHighlight = () => {
             </div>
 
             <Button asChild className="gap-2">
-              <Link to="/contact">
+              <Link to="/contact#book-appointment">
                 Book Appointment with Dr. Vamshi
                 <ArrowRight className="w-4 h-4" />
               </Link>

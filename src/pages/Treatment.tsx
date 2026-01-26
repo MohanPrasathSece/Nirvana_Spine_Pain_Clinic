@@ -2,10 +2,13 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import treatmentSpineSurgery from "@/assets/treatment-spine-surgery.jpg";
+import treatmentSpineSurgery from "@/assets/spine-surgery.jpg";
 import treatmentInjection from "@/assets/treatment-injection.jpg";
 import treatmentPhysiotherapy from "@/assets/treatment-physiotherapy.jpg";
-
+import treatmentNerveBlock from "@/assets/treatment-nerve-block.jpg";
+import treatmentSpineCare from "@/assets/treatment-spine-care.jpg";
+import treatmentTherapy from "@/assets/therapy.jpg";
+import treatmentSurgery from "@/assets/surgery.jpg";
 const treatments = [
   {
     title: "Epidural Steroid Injections",
@@ -29,7 +32,7 @@ const treatments = [
       "Long-lasting effects",
       "Minimal downtime",
     ],
-    image: treatmentInjection,
+    image: treatmentNerveBlock,
   },
   {
     title: "Radiofrequency Ablation",
@@ -41,7 +44,7 @@ const treatments = [
       "Quick recovery",
       "Repeatable procedure",
     ],
-    image: treatmentSpineSurgery,
+    image: treatmentSurgery,
   },
   {
     title: "Spinal Cord Stimulation",
@@ -53,7 +56,7 @@ const treatments = [
       "Reversible treatment",
       "Proven effectiveness",
     ],
-    image: treatmentSpineSurgery,
+    image: treatmentSpineCare,
   },
   {
     title: "Physical Therapy & Rehabilitation",
@@ -77,7 +80,7 @@ const treatments = [
       "Minimal side effects",
       "Improved mobility",
     ],
-    image: treatmentInjection,
+    image: treatmentTherapy,
   },
 ];
 
@@ -93,7 +96,7 @@ const Treatment = () => {
               Advanced Pain Management Treatments
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Dr. Vamshi offers cutting-edge interventional pain management procedures 
+              Dr. Vamshi offers cutting-edge interventional pain management procedures
               using the latest techniques for effective, long-lasting relief.
             </p>
           </div>
@@ -144,11 +147,11 @@ const Treatment = () => {
       {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-medical text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Ready to Start Your Treatment?
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Dr. Vamshi will evaluate your condition and recommend the most 
+            Dr. Vamshi will evaluate your condition and recommend the most
             effective treatment plan for your specific needs.
           </p>
           <Button size="lg" variant="secondary" asChild className="gap-2">

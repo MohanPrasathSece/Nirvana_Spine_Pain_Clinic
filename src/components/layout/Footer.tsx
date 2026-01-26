@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
               <img
-                src="/nirvana logo bg removed.png"
+                src="/logo-nobg.png"
                 alt="Nirvana Spine & Pain Clinic Logo"
                 className="h-16 w-auto"
               />
@@ -72,7 +72,7 @@ const Footer = () => {
                 { name: "About Us", href: "/about" },
                 { name: "Conditions", href: "/conditions" },
                 { name: "Treatments", href: "/treatment" },
-                { name: "Book Appointment", href: "/contact" },
+                { name: "Book Appointment", href: "/contact#book-appointment" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link

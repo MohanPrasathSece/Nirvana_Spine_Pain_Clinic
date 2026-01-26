@@ -1,7 +1,9 @@
 import Layout from "@/components/layout/Layout";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Shield, Target, Eye, Heart, Award, GraduationCap } from "lucide-react";
-import doctorPortrait from "@/assets/doctor-portrait.jpg";
-import clinicInterior from "@/assets/clinic-interior.jpg";
+const doctorPortrait = "/image/procedure-3.jpg";
+import clinicInterior from "@/assets/clinic.jpg";
 
 const values = [
   {
@@ -45,8 +47,8 @@ const About = () => {
               Your Trusted Spine & Pain Specialists in Hyderabad
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nirvana Spine & Pain Clinic is dedicated to helping patients 
-              overcome chronic pain and spine conditions with expert care and 
+              Nirvana Spine & Pain Clinic is dedicated to helping patients
+              overcome chronic pain and spine conditions with expert care and
               advanced treatment options.
             </p>
           </div>
@@ -63,20 +65,20 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Dr. Vamshi is a renowned spine and pain management specialist 
-                  in Hyderabad with over 15 years of experience. He has dedicated 
-                  his career to helping patients find relief from chronic pain 
+                  Dr. Vamshi is a renowned spine and pain management specialist
+                  in Hyderabad with over 15 years of experience. He has dedicated
+                  his career to helping patients find relief from chronic pain
                   through advanced interventional techniques.
                 </p>
                 <p>
-                  After completing his medical education and fellowship in pain 
-                  management, Dr. Vamshi established Nirvana Spine & Pain Clinic 
-                  to provide world-class care to patients suffering from spine 
+                  After completing his medical education and fellowship in pain
+                  management, Dr. Vamshi established Nirvana Spine & Pain Clinic
+                  to provide world-class care to patients suffering from spine
                   conditions and chronic pain.
                 </p>
                 <p>
-                  His patient-centered approach combines the latest medical 
-                  advances with personalized treatment plans, ensuring each 
+                  His patient-centered approach combines the latest medical
+                  advances with personalized treatment plans, ensuring each
                   patient receives the care best suited to their unique condition.
                 </p>
               </div>
@@ -114,8 +116,8 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To provide exceptional spine and pain care that restores quality 
-                of life. We are committed to accurate diagnosis, effective treatment, 
+                To provide exceptional spine and pain care that restores quality
+                of life. We are committed to accurate diagnosis, effective treatment,
                 and compassionate care that addresses the root cause of pain.
               </p>
             </div>
@@ -127,8 +129,8 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be Hyderabad's most trusted spine and pain management clinic, 
-                recognized for clinical excellence, innovative treatments, and 
+                To be Hyderabad's most trusted spine and pain management clinic,
+                recognized for clinical excellence, innovative treatments, and
                 helping every patient achieve a pain-free life.
               </p>
             </div>
@@ -179,6 +181,8 @@ const About = () => {
         </div>
       </section>
 
+
+
       {/* Facility */}
       <section className="section-padding bg-secondary">
         <div className="container-medical">
@@ -196,9 +200,9 @@ const About = () => {
                 Modern Clinic in Hyderabad
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Our state-of-the-art clinic in Hyderabad is designed with 
-                patient comfort in mind. Equipped with the latest medical 
-                technology, we provide comprehensive diagnostic and treatment 
+                Our state-of-the-art clinic in Hyderabad is designed with
+                patient comfort in mind. Equipped with the latest medical
+                technology, we provide comprehensive diagnostic and treatment
                 services for all spine and pain conditions.
               </p>
               <ul className="space-y-4">
@@ -215,6 +219,63 @@ const About = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conditions CTA */}
+      <section className="section-padding">
+        <div className="container-medical text-center">
+          <div className="max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Conditions We Treat
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We provide expert care for a wide range of spine and pain conditions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              "Chronic Back Pain",
+              "Sciatica",
+              "Neck Pain",
+              "Herniated Disc",
+              "Spinal Stenosis",
+              "Spondylosis",
+              "Joint Pain",
+              "Nerve Pain"
+            ].map((condition) => (
+              <div key={condition} className="bg-accent/50 p-4 rounded-xl border border-border/50">
+                <p className="font-medium text-foreground">{condition}</p>
+              </div>
+            ))}
+          </div>
+
+          <Button asChild size="lg" className="rounded-full px-8">
+            <Link to="/conditions">View All Conditions & Treatments</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Blue CTA Section */}
+      <section className="section-padding bg-primary text-primary-foreground">
+        <div className="container-medical">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
+              Ready to Start Your Journey to Pain-Free Living?
+            </h2>
+            <p className="text-lg mb-8 text-primary-foreground/90">
+              Schedule a consultation with Dr. Vamshi and take the first step towards lasting relief.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary" className="rounded-full px-8">
+                <Link to="/contact#book-appointment">Book Appointment</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <a href="tel:+919876543210">Call +91 98765 43210</a>
+              </Button>
             </div>
           </div>
         </div>

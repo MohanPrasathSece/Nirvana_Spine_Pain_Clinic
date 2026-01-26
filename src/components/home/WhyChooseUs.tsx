@@ -1,5 +1,5 @@
 import { Shield, Users, Clock, Award } from "lucide-react";
-import clinicInterior from "@/assets/clinic-interior.jpg";
+import clinicInterior from "@/assets/clinic.jpg";
 
 const features = [
   {
@@ -49,8 +49,8 @@ const WhyChooseUs = () => {
               Your Journey to a Pain-Free Life Starts Here
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              At Nirvana Spine & Pain Clinic, we combine medical expertise with 
-              compassionate care. Dr. Vamshi and his team are dedicated to 
+              At Nirvana Spine & Pain Clinic, we combine medical expertise with
+              compassionate care. Dr. Vamshi and his team are dedicated to
               helping you achieve lasting relief from chronic pain.
             </p>
 

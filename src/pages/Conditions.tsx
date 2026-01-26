@@ -5,7 +5,10 @@ import { ArrowRight } from "lucide-react";
 import conditionBackPain from "@/assets/condition-back-pain.jpg";
 import conditionNeckPain from "@/assets/condition-neck-pain.jpg";
 import conditionSciatica from "@/assets/condition-sciatica.jpg";
-
+import conditionSlipDisc from "@/assets/condition-slip-disc.jpg";
+import conditionKneePain from "@/assets/condition-knee-pain.jpg";
+import conditionSpineCare from "@/assets/spine-care.jpg";
+import conditionDegenerative from "@/assets/slip-disc.jpg";
 const conditions = [
   {
     title: "Chronic Back Pain",
@@ -33,21 +36,28 @@ const conditions = [
     description:
       "Advanced treatment for bulging or ruptured spinal discs that cause nerve compression. Our minimally invasive approaches provide effective relief with faster recovery.",
     symptoms: ["Arm or leg pain", "Numbness or tingling", "Muscle weakness", "Pain with movement"],
-    image: conditionBackPain,
+    image: conditionSlipDisc,
   },
   {
     title: "Spinal Stenosis",
     description:
       "Expert management of narrowed spinal canal that compresses nerves. We offer comprehensive treatment options from physical therapy to interventional procedures.",
     symptoms: ["Back pain", "Leg cramping", "Difficulty walking", "Balance problems"],
-    image: conditionNeckPain,
+    image: conditionSpineCare,
   },
   {
     title: "Degenerative Disc Disease",
     description:
       "Specialized care for age-related disc degeneration causing chronic pain. Our multi-disciplinary approach helps manage symptoms and improve quality of life.",
     symptoms: ["Chronic low back pain", "Pain that worsens with sitting", "Stiffness", "Periods of severe pain"],
-    image: conditionSciatica,
+    image: conditionDegenerative,
+  },
+  {
+    title: "Joint & Knee Pain",
+    description:
+      "Effective management of joint and knee pain through advanced interventional therapies and physical rehabilitation.",
+    symptoms: ["Joint swelling", "Reduced range of motion", "Pain with activity", "Morning stiffness"],
+    image: conditionKneePain,
   },
 ];
 
@@ -63,7 +73,7 @@ const Conditions = () => {
               Spine & Pain Conditions
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Dr. Vamshi specializes in diagnosing and treating a wide range of 
+              Dr. Vamshi specializes in diagnosing and treating a wide range of
               spine conditions and chronic pain disorders with advanced, personalized care.
             </p>
           </div>
@@ -114,11 +124,11 @@ const Conditions = () => {
       {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-medical text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Experiencing Any of These Symptoms?
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Don't let pain control your life. Schedule a consultation with 
+            Don't let pain control your life. Schedule a consultation with
             Dr. Vamshi to get an accurate diagnosis and personalized treatment plan.
           </p>
           <Button size="lg" variant="secondary" asChild className="gap-2">
