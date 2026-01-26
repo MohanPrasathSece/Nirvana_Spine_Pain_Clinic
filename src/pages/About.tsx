@@ -63,7 +63,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
                 Meet Dr. Vamshi
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Dr. Vamshi is a renowned spine and pain management specialist
                   in Hyderabad with over 15 years of experience. He has dedicated
@@ -115,7 +115,7 @@ const About = () => {
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
                 Our Mission
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 To provide exceptional spine and pain care that restores quality
                 of life. We are committed to accurate diagnosis, effective treatment,
                 and compassionate care that addresses the root cause of pain.
@@ -128,7 +128,7 @@ const About = () => {
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
                 Our Vision
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 To be Hyderabad's most trusted spine and pain management clinic,
                 recognized for clinical excellence, innovative treatments, and
                 helping every patient achieve a pain-free life.
@@ -199,7 +199,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
                 Modern Clinic in Hyderabad
               </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Our state-of-the-art clinic in Hyderabad is designed with
                 patient comfort in mind. Equipped with the latest medical
                 technology, we provide comprehensive diagnostic and treatment

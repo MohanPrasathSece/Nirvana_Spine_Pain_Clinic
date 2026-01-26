@@ -37,8 +37,8 @@ const WhyChooseUs = () => {
               className="rounded-2xl shadow-lg w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg hidden md:block">
-              <p className="text-4xl font-heading font-bold">15+</p>
-              <p className="text-sm">Years of Excellence</p>
+              <p className="text-4xl font-heading font-bold">10k+</p>
+              <p className="text-sm">Patients Treated</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
               Your Journey to a Pain-Free Life Starts Here
             </h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               At Nirvana Spine & Pain Clinic, we combine medical expertise with
               compassionate care. Dr. Vamshi and his team are dedicated to
               helping you achieve lasting relief from chronic pain.

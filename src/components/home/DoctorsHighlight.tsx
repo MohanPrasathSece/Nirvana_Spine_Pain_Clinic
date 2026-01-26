@@ -9,11 +9,11 @@ const DoctorsHighlight = () => {
       <div className="container-medical">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative order-1 lg:order-1 w-full">
+          <div className="relative order-1 lg:order-2 w-full">
             <img
               src={doctorPortrait}
               alt="Dr. Vamshi - Spine Specialist"
-              className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
+              className="rounded-2xl shadow-lg w-full max-w-lg mx-auto"
             />
             <div className="absolute -bottom-6 -right-6 md:right-10 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
               <p className="text-3xl font-heading font-bold">15+</p>
@@ -22,7 +22,7 @@ const DoctorsHighlight = () => {
           </div>
 
           {/* Content */}
-          <div className="order-2 lg:order-2">
+          <div className="order-2 lg:order-1">
             <p className="text-primary font-medium mb-2">Meet Your Specialist</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
               Dr. Vamshi
@@ -30,7 +30,7 @@ const DoctorsHighlight = () => {
             <p className="text-xl text-muted-foreground mb-2">
               Spine & Pain Management Specialist
             </p>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Dr. Vamshi is a renowned spine specialist in Hyderabad with over
               15 years of experience in treating complex spine conditions and
               chronic pain. He combines advanced interventional techniques with

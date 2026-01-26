@@ -17,6 +17,11 @@ export default {
         sans: ["DM Sans", "system-ui", "sans-serif"],
         heading: ["Plus Jakarta Sans", "DM Sans", "sans-serif"],
       },
+      fontSize: {
+        xs: ["0.875rem", { lineHeight: "1.25rem" }],
+        sm: ["1rem", { lineHeight: "1.5rem" }],
+        base: ["1.125rem", { lineHeight: "1.75rem" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

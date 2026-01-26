@@ -72,6 +72,7 @@ const Footer = () => {
                 { name: "About Us", href: "/about" },
                 { name: "Conditions", href: "/conditions" },
                 { name: "Treatments", href: "/treatment" },
+                { name: "Gallery", href: "/gallery" },
                 { name: "Book Appointment", href: "/contact#book-appointment" },
               ].map((link) => (
                 <li key={link.name}>
