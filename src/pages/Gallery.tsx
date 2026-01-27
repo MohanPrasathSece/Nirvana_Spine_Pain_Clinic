@@ -79,11 +79,6 @@ const Gallery = () => {
                                         alt={image.alt}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end justify-center p-6">
-                                        <h3 className="font-heading text-lg font-semibold text-white text-center">
-                                            {image.title}
-                                        </h3>
-                                    </div>
                                 </div>
                             </div>
                         ))}

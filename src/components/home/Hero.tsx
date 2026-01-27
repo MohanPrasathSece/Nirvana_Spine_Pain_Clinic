@@ -38,7 +38,7 @@ const Hero = () => {
                 Book Appointment
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="gap-2 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+            <Button size="lg" variant="outline" asChild className="gap-2 bg-transparent border-primary/20 hover:bg-primary/5">
               <a href="tel:+919000004992">
                 <Phone className="w-5 h-5" />
                 Call Now

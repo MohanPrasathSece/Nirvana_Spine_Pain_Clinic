@@ -2,62 +2,93 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import conditionBackPain from "@/assets/condition-back-pain.jpg";
-import conditionNeckPain from "@/assets/condition-neck-pain.jpg";
-import conditionSciatica from "@/assets/condition-sciatica.jpg";
-import conditionSlipDisc from "@/assets/condition-slip-disc.jpg";
-import conditionKneePain from "@/assets/condition-knee-pain.jpg";
-import conditionSpineCare from "@/assets/spine-care.jpg";
-import conditionDegenerative from "@/assets/slip-disc.jpg";
-const conditions = [
+import spineImg from "@/assets/spine-care.jpg";
+import jointImg from "@/assets/condition-knee-pain.jpg";
+import nerveImg from "@/assets/condition-sciatica.jpg";
+import chronicImg from "@/assets/condition-back-pain.jpg";
+import headImg from "@/assets/condition-neck-pain.jpg";
+import cancerImg from "@/assets/medical-team.jpg";
+import specializedImg from "@/assets/condition-slip-disc.jpg";
+
+const conditionSections = [
   {
-    title: "Chronic Back Pain",
-    description:
-      "Comprehensive treatment for persistent lower back pain caused by muscle strain, disc problems, arthritis, or spinal conditions. We identify the root cause and provide targeted relief.",
-    symptoms: ["Persistent aching or stiffness", "Sharp localized pain", "Pain radiating to legs", "Difficulty standing or walking"],
-    image: conditionBackPain,
+    title: "Spine & Nerve Pain",
+    image: spineImg,
+    description: "Conditions affecting the vertebrae, discs, and nerves of the spinal column, often resulting in localized or radiating pain.",
+    items: [
+      "Low Back Pain",
+      "Neck Pain",
+      "Slip Disc / Disc Bulge",
+      "Sciatica",
+      "Cervical & Lumbar Spondylosis",
+    ],
   },
   {
-    title: "Neck Pain & Cervical Disorders",
-    description:
-      "Expert care for neck pain, cervical spondylosis, and related conditions. Our treatments address the underlying issues for long-term relief and improved mobility.",
-    symptoms: ["Neck stiffness", "Pain radiating to shoulders/arms", "Headaches", "Numbness or tingling"],
-    image: conditionNeckPain,
+    title: "Joint & Musculoskeletal Pain",
+    image: jointImg,
+    description: "Pain arising from the joints and surrounding muscles or ligaments, frequently caused by wear, tear, or inflammation.",
+    items: [
+      "Knee Pain",
+      "Shoulder Pain",
+      "Hip Pain",
+      "Elbow & Wrist Pain",
+      "Sports Injuries",
+    ],
   },
   {
-    title: "Sciatica",
-    description:
-      "Specialized treatment for sciatic nerve pain that radiates from the lower back through the hips and down the legs. We offer both conservative and interventional approaches.",
-    symptoms: ["Radiating leg pain", "Numbness or weakness", "Burning sensation", "Pain when sitting"],
-    image: conditionSciatica,
+    title: "Nerve-Related Pain",
+    image: nerveImg,
+    description: "Complex pain syndromes caused by damage or dysfunction within the nervous system itself.",
+    items: [
+      "Neuropathic Pain",
+      "Diabetic Neuropathy",
+      "Post-Herpetic Neuralgia",
+      "Nerve Entrapment Syndrome",
+    ],
   },
   {
-    title: "Herniated Disc",
-    description:
-      "Advanced treatment for bulging or ruptured spinal discs that cause nerve compression. Our minimally invasive approaches provide effective relief with faster recovery.",
-    symptoms: ["Arm or leg pain", "Numbness or tingling", "Muscle weakness", "Pain with movement"],
-    image: conditionSlipDisc,
+    title: "Chronic Pain",
+    image: chronicImg,
+    description: "Persistent pain lasting beyond typical healing times, often requiring specialized multi-disciplinary management.",
+    items: [
+      "Myofascial Pain Syndrome",
+      "Chronic Low Back Pain",
+      "Failed Back Surgery Syndrome",
+      "Post-Surgical Pain",
+    ],
   },
   {
-    title: "Spinal Stenosis",
-    description:
-      "Expert management of narrowed spinal canal that compresses nerves. We offer comprehensive treatment options from physical therapy to interventional procedures.",
-    symptoms: ["Back pain", "Leg cramping", "Difficulty walking", "Balance problems"],
-    image: conditionSpineCare,
+    title: "Head & Facial Pain",
+    image: headImg,
+    description: "Debilitating conditions including chronic migraines and neuralgia that significantly impact daily functioning.",
+    items: [
+      "Migraine",
+      "Tension-Type Headache",
+      "Cervicogenic Headache",
+      "Trigeminal Neuralgia",
+    ],
   },
   {
-    title: "Degenerative Disc Disease",
-    description:
-      "Specialized care for age-related disc degeneration causing chronic pain. Our multi-disciplinary approach helps manage symptoms and improve quality of life.",
-    symptoms: ["Chronic low back pain", "Pain that worsens with sitting", "Stiffness", "Periods of severe pain"],
-    image: conditionDegenerative,
+    title: "Cancer & Palliative Pain",
+    image: cancerImg,
+    description: "Specialized care focusing on managing pain associated with cancer and its treatments to improve quality of life.",
+    items: [
+      "Cancer-Related Pain",
+      "Treatment-Related Pain",
+      "Advanced Stage Pain",
+      "Palliative Pain Care",
+    ],
   },
   {
-    title: "Joint & Knee Pain",
-    description:
-      "Effective management of joint and knee pain through advanced interventional therapies and physical rehabilitation.",
-    symptoms: ["Joint swelling", "Reduced range of motion", "Pain with activity", "Morning stiffness"],
-    image: conditionKneePain,
+    title: "Specialized Pain Conditions",
+    image: specializedImg,
+    description: "Complex and localized pain syndromes that require specific diagnostic and therapeutic expertise.",
+    items: [
+      "CRPS (Complex Regional Pain Syndrome)",
+      "Pelvic Pain",
+      "Tailbone (Coccyx) Pain",
+      "Sacroiliac Joint Pain",
+    ],
   },
 ];
 
@@ -65,55 +96,65 @@ const Conditions = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-secondary section-padding">
-        <div className="container-medical">
+      <section className="bg-secondary section-padding relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary rounded-full blur-3xl -ml-32 -mb-32" />
+        </div>
+        <div className="container-medical relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-primary font-medium mb-2">Conditions We Treat</p>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Spine & Pain Conditions
+            <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Our Expertise</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6">
+              Conditions We Treat
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Dr. Vamshi specializes in diagnosing and treating a wide range of
-              spine conditions and chronic pain disorders with advanced, personalized care.
+              We provide comprehensive diagnostic and personalized treatment plans for a wide range of acute and chronic pain conditions, helping you return to an active, pain-free life.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Conditions Grid */}
-      <section className="section-padding">
+      {/* Conditions Sections */}
+      <section className="section-padding bg-background">
         <div className="container-medical">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {conditions.map((condition) => (
-              <div key={condition.title} className="card-medical overflow-hidden group">
+            {conditionSections.map((section, index) => (
+              <div
+                key={section.title}
+                className="bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden flex flex-col"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={condition.image}
-                    alt={condition.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={section.image}
+                    alt={section.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                    {condition.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {condition.description}
-                  </p>
-                  <div className="mb-4">
-                    <p className="text-sm font-medium text-foreground mb-2">Common Symptoms:</p>
-                    <ul className="space-y-1">
-                      {condition.symptoms.map((symptom) => (
-                        <li
-                          key={symptom}
-                          className="flex items-center gap-2 text-sm text-muted-foreground"
-                        >
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          {symptom}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                      {index + 1}
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-foreground">
+                      {section.title}
+                    </h3>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                    {section.description}
+                  </p>
+                  <ul className="space-y-4">
+                    {section.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-muted-foreground group/item"
+                      >
+                        <div className="w-2 h-2 rounded-full bg-primary/40 mt-2 flex-shrink-0 group-hover/item:bg-primary transition-colors" />
+                        <span className="text-sm md:text-base leading-snug group-hover/item:text-foreground transition-colors">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -122,21 +163,31 @@ const Conditions = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-medical text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            Experiencing Any of These Symptoms?
+      <section className="section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[length:24px_24px]" />
+        </div>
+        <div className="container-medical relative z-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+            Find Relief Today
           </h2>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Don't let pain control your life. Schedule a consultation with
-            Dr. Vamshi to get an accurate diagnosis and personalized treatment plan.
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-10 text-lg">
+            Don't let chronic pain limit your potential. Schedule a thorough evaluation with our pain specialists to discover the root cause and effective treatment options.
           </p>
-          <Button size="lg" variant="secondary" asChild className="gap-2">
-            <Link to="/contact">
-              Book an Appointment
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" variant="secondary" asChild className="gap-2 h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+              <Link to="/contact">
+                Book a Consultation
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+            <a
+              href="tel:+919000004992"
+              className="text-white font-medium hover:underline flex items-center gap-2"
+            >
+              Call Us: +91 90000 04992
+            </a>
+          </div>
         </div>
       </section>
     </Layout>

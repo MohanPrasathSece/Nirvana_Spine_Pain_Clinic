@@ -5,19 +5,21 @@ const doctorPortrait = "/image/vamshiimage.png";
 
 const DoctorsHighlight = () => {
   return (
-    <section className="section-padding bg-accent">
+    <section className="section-padding bg-white border-y border-border/40">
       <div className="container-medical">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative order-1 lg:order-2 w-full">
-            <img
-              src={doctorPortrait}
-              alt="Dr. Vamshi - Spine Specialist"
-              className="rounded-2xl shadow-lg w-full max-w-lg mx-auto"
-            />
-            <div className="absolute -bottom-6 -right-6 md:right-10 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-              <p className="text-3xl font-heading font-bold">3</p>
-              <p className="text-sm opacity-90">Years Experience</p>
+          <div className="relative order-1 lg:order-2 w-full flex justify-center">
+            <div className="relative max-w-sm">
+              <img
+                src={doctorPortrait}
+                alt="Dr. Vamshi - Spine Specialist"
+                className="rounded-2xl shadow-lg w-full h-auto object-cover"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg md:-right-8">
+                <p className="text-2xl font-heading font-bold">3</p>
+                <p className="text-xs opacity-90 uppercase tracking-tighter font-semibold">Years Exp</p>
+              </div>
             </div>
           </div>
 

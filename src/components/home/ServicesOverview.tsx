@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { 
-  Activity, 
-  Syringe, 
-  Dumbbell, 
-  Stethoscope, 
-  Brain, 
+import {
+  Activity,
+  Syringe,
+  Dumbbell,
+  Stethoscope,
+  Brain,
   Bone,
   ArrowRight
 } from "lucide-react";
@@ -13,33 +13,33 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: Bone,
-    title: "Spine Care",
-    description: "Comprehensive treatment for herniated discs, spinal stenosis, and degenerative conditions.",
+    title: "Spine & Nerve Pain",
+    description: "Expert care for low back pain, neck pain, slip disc, sciatica, and spondylosis.",
   },
   {
     icon: Activity,
-    title: "Pain Management",
-    description: "Advanced interventional procedures for chronic back, neck, and joint pain relief.",
-  },
-  {
-    icon: Syringe,
-    title: "Injection Therapy",
-    description: "Epidural steroid injections, nerve blocks, and trigger point therapy.",
-  },
-  {
-    icon: Dumbbell,
-    title: "Physiotherapy",
-    description: "Personalized rehabilitation programs to restore mobility and strength.",
-  },
-  {
-    icon: Stethoscope,
-    title: "Diagnostic Services",
-    description: "MRI, X-ray interpretation, and comprehensive spine assessments.",
+    title: "Joint & MSK Pain",
+    description: "Advanced relief for knee, shoulder, hip, elbow, wrist pain, and sports injuries.",
   },
   {
     icon: Brain,
-    title: "Neuromodulation",
-    description: "Advanced techniques including spinal cord stimulation for chronic pain.",
+    title: "Nerve-Related Pain",
+    description: "Comprehensive management of neuropathic pain, diabetic neuropathy, and neuralgia.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Chronic Pain Care",
+    description: "Specialized treatment for myofascial pain and failed back surgery syndrome.",
+  },
+  {
+    icon: Syringe,
+    title: "Head & Facial Pain",
+    description: "Effective interventions for migraines, tension headaches, and trigeminal neuralgia.",
+  },
+  {
+    icon: Activity,
+    title: "Advanced Procedures",
+    description: "Minimally invasive RFA, nerve blocks, and image-guided injections.",
   },
 ];
 
@@ -54,7 +54,7 @@ const ServicesOverview = () => {
             Specialized Spine & Pain Treatments
           </h2>
           <p className="text-muted-foreground">
-            We offer a comprehensive range of treatments for spine conditions 
+            We offer a comprehensive range of treatments for spine conditions
             and chronic pain, using the latest medical advances.
           </p>
         </div>

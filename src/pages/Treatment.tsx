@@ -2,85 +2,84 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import treatmentSpineSurgery from "@/assets/spine-surgery.jpg";
-import treatmentInjection from "@/assets/treatment-injection.jpg";
-import treatmentPhysiotherapy from "@/assets/treatment-physiotherapy.jpg";
-import treatmentNerveBlock from "@/assets/treatment-nerve-block.jpg";
-import treatmentSpineCare from "@/assets/treatment-spine-care.jpg";
-import treatmentTherapy from "@/assets/therapy.jpg";
-import treatmentSurgery from "@/assets/surgery.jpg";
-const treatments = [
+
+import spineTreatImg from "@/assets/treatment-spine-care.jpg";
+import jointTreatImg from "@/assets/treatment-injection.jpg";
+import nerveTreatImg from "@/assets/treatment-nerve-block.jpg";
+import headTreatImg from "@/assets/therapy.jpg";
+import cancerTreatImg from "@/assets/surgery.jpg";
+import advancedTreatImg from "@/assets/diagnostic.jpg";
+
+const treatmentSections = [
   {
-    title: "Epidural Steroid Injections",
-    description:
-      "Targeted injections to reduce inflammation and relieve pain caused by herniated discs, spinal stenosis, and other conditions affecting the spine.",
-    benefits: [
-      "Quick pain relief",
-      "Minimally invasive",
-      "Outpatient procedure",
-      "Reduced inflammation",
+    title: "Spine Pain Treatments",
+    image: spineTreatImg,
+    description: "Minimally invasive injections and ablation techniques designed to target spinal nerves and joints directly at the source of pain.",
+    items: [
+      "Epidural Steroid Injection",
+      "Selective Nerve Root Block",
+      "Facet Joint Injection",
+      "Medial Branch Block",
+      "Radiofrequency Ablation (RFA)",
+      "Sacroiliac Joint Injection",
     ],
-    image: treatmentInjection,
   },
   {
-    title: "Nerve Block Therapy",
-    description:
-      "Precise nerve blocks to interrupt pain signals and provide relief for chronic pain conditions, including facet joint pain and sacroiliac dysfunction.",
-    benefits: [
-      "Targeted pain relief",
-      "Diagnostic value",
-      "Long-lasting effects",
-      "Minimal downtime",
+    title: "Joint Pain Treatments",
+    image: jointTreatImg,
+    description: "Precise, image-guided injections to reduce inflammation and restore mobility in both major and minor joints throughout the body.",
+    items: [
+      "Knee Joint Injection",
+      "Shoulder Injection",
+      "Hip Joint Injection",
+      "Elbow & Wrist Injection",
+      "Ultrasound-Guided Injections",
     ],
-    image: treatmentNerveBlock,
   },
   {
-    title: "Radiofrequency Ablation",
-    description:
-      "Advanced technique using heat to disable nerves causing chronic pain. Provides long-term relief for facet joint pain and other chronic conditions.",
-    benefits: [
-      "Long-lasting relief (6-12 months)",
-      "Minimally invasive",
-      "Quick recovery",
-      "Repeatable procedure",
+    title: "Nerve Pain Treatments",
+    image: nerveTreatImg,
+    description: "Targeted blocks and specialized therapeutic interventions to interrupt the transmission of chronic or acute nerve pain signals.",
+    items: [
+      "Nerve Blocks for Neuropathic Pain",
+      "Stellate Ganglion Block",
+      "Trigeminal Nerve Block",
+      "Intercostal Nerve Block",
+      "Peripheral Nerve Blocks",
     ],
-    image: treatmentSurgery,
   },
   {
-    title: "Spinal Cord Stimulation",
-    description:
-      "Neuromodulation therapy that uses electrical impulses to interrupt pain signals. Ideal for patients with chronic pain who haven't responded to other treatments.",
-    benefits: [
-      "Drug-free pain management",
-      "Adjustable therapy",
-      "Reversible treatment",
-      "Proven effectiveness",
+    title: "Headache & Facial Pain Treatments",
+    image: headTreatImg,
+    description: "Advanced interventional procedures provide long-term relief from chronic migraines and complex facial neuralgia conditions.",
+    items: [
+      "Migraine Injections",
+      "Occipital Nerve Block",
+      "Trigeminal Neuralgia Interventions",
     ],
-    image: treatmentSpineCare,
   },
   {
-    title: "Physical Therapy & Rehabilitation",
-    description:
-      "Customized exercise programs and manual therapy to strengthen muscles, improve flexibility, and prevent future pain episodes.",
-    benefits: [
-      "Personalized programs",
-      "Core strengthening",
-      "Posture correction",
-      "Long-term prevention",
+    title: "Cancer & Palliative Treatments",
+    image: cancerTreatImg,
+    description: "Highly specialized nerve blocks and pain management protocols specifically designed for patients in oncology and palliative care.",
+    items: [
+      "Diagnostic & Therapeutic Nerve Blocks",
+      "Neurolytic Blocks",
+      "Celiac Plexus Block",
+      "Superior Hypogastric Block",
+      "Intrathecal Pain Management",
     ],
-    image: treatmentPhysiotherapy,
   },
   {
-    title: "Trigger Point Injections",
-    description:
-      "Targeted injections to release tight muscle knots causing pain. Effective for myofascial pain syndrome and muscle-related back and neck pain.",
-    benefits: [
-      "Immediate relief",
-      "Simple procedure",
-      "Minimal side effects",
-      "Improved mobility",
+    title: "Advanced Pain Procedures",
+    image: advancedTreatImg,
+    description: "Cutting-edge, image-guided technological interventions using radiofrequency energy to provide durable and non-surgical pain relief.",
+    items: [
+      "Radiofrequency Ablation (RFA)",
+      "Pulsed RFA",
+      "Ultrasound-Guided Procedures",
+      "Image-Guided Injections",
     ],
-    image: treatmentTherapy,
   },
 ];
 
@@ -88,55 +87,63 @@ const Treatment = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-secondary section-padding">
-        <div className="container-medical">
+      <section className="bg-secondary section-padding relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary rounded-full blur-3xl -ml-32 -mb-32" />
+        </div>
+        <div className="container-medical relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-primary font-medium mb-2">Our Treatments</p>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Advanced Pain Management Treatments
+            <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Our Procedures</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6">
+              Treatments & Procedures
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Dr. Vamshi offers cutting-edge interventional pain management procedures
-              using the latest techniques for effective, long-lasting relief.
+              We offer a comprehensive range of advanced, minimally invasive interventional procedures designed to target pain at its source and promote fast recovery.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Treatments Grid */}
-      <section className="section-padding">
+      {/* Treatment Sections */}
+      <section className="section-padding bg-background">
         <div className="container-medical">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {treatments.map((treatment) => (
-              <div key={treatment.title} className="card-medical overflow-hidden group">
+            {treatmentSections.map((section, index) => (
+              <div
+                key={section.title}
+                className="bg-card rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden group"
+              >
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={treatment.image}
-                    alt={treatment.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    src={section.image}
+                    alt={section.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                    {treatment.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {treatment.description}
-                  </p>
-                  <div>
-                    <p className="text-sm font-medium text-foreground mb-2">Key Benefits:</p>
-                    <ul className="space-y-2">
-                      {treatment.benefits.map((benefit) => (
-                        <li
-                          key={benefit}
-                          className="flex items-center gap-2 text-sm text-muted-foreground"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="mb-6">
+                    <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+                      {section.title}
+                    </h3>
+                    <div className="w-12 h-1 bg-primary/20 rounded-full group-hover:w-24 transition-all mb-4" />
+                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                      {section.description}
+                    </p>
                   </div>
+                  <ul className="space-y-3 flex-grow">
+                    {section.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-4 text-muted-foreground"
+                      >
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm md:text-base leading-snug">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -145,18 +152,18 @@ const Treatment = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-medical text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            Ready to Start Your Treatment?
+      <section className="section-padding bg-primary relative overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-white/20" />
+        <div className="container-medical relative z-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">
+            Take the First Step to Recovery
           </h2>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Dr. Vamshi will evaluate your condition and recommend the most
-            effective treatment plan for your specific needs.
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-10 text-lg">
+            Every patient's pain is unique. Schedule a consultation to discuss which interventional procedure is right for you.
           </p>
-          <Button size="lg" variant="secondary" asChild className="gap-2">
+          <Button size="lg" variant="secondary" asChild className="gap-2 h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
             <Link to="/contact">
-              Schedule a Consultation
+              Schedule Your Visit
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>

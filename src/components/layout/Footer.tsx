@@ -92,11 +92,12 @@ const Footer = () => {
             <h4 className="font-heading text-lg font-semibold mb-4">Conditions</h4>
             <ul className="space-y-3">
               {[
-                { name: "Back Pain", href: "/conditions" },
+                { name: "Low Back Pain", href: "/conditions" },
                 { name: "Neck Pain", href: "/conditions" },
                 { name: "Sciatica", href: "/conditions" },
-                { name: "Herniated Disc", href: "/conditions" },
-                { name: "Spinal Stenosis", href: "/conditions" },
+                { name: "Slip Disc / Disc Bulge", href: "/conditions" },
+                { name: "Joint Pain", href: "/conditions" },
+                { name: "Neuropathic Pain", href: "/conditions" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link

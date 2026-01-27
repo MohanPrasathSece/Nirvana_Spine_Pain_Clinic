@@ -1,5 +1,5 @@
 import { Shield, Users, Clock, Award } from "lucide-react";
-import clinicInterior from "@/assets/clinic.jpg";
+import clinicInterior from "@/assets/clinic-interior.jpg";
 
 const features = [
   {

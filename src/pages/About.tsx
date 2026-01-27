@@ -238,14 +238,14 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {[
-              "Chronic Back Pain",
-              "Sciatica",
-              "Neck Pain",
-              "Herniated Disc",
-              "Spinal Stenosis",
-              "Spondylosis",
-              "Joint Pain",
-              "Nerve Pain"
+              "Spine & Nerve Pain",
+              "Joint & MSK Pain",
+              "Nerve-Related Pain",
+              "Chronic Pain",
+              "Head & Facial Pain",
+              "Cancer Pain Care",
+              "Back Surgery Issues",
+              "Specialized Pain"
             ].map((condition) => (
               <div key={condition} className="bg-accent/50 p-4 rounded-xl border border-border/50">
                 <p className="font-medium text-foreground">{condition}</p>
