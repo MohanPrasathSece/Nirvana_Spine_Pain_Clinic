@@ -21,9 +21,9 @@ const CTASection = () => {
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="gap-2 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-            <a href="tel:+919876543210">
+            <a href="tel:+919000004992">
               <Phone className="w-5 h-5" />
-              +91 98765 43210
+              +91 90000 04992
             </a>
           </Button>
         </div>

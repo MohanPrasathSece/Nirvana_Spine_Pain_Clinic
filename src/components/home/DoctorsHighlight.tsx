@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, GraduationCap, Clock } from "lucide-react";
-const doctorPortrait = "/image/procedure-3.jpg";
+const doctorPortrait = "/image/vamshiimage.png";
 
 const DoctorsHighlight = () => {
   return (
@@ -16,7 +16,7 @@ const DoctorsHighlight = () => {
               className="rounded-2xl shadow-lg w-full max-w-lg mx-auto"
             />
             <div className="absolute -bottom-6 -right-6 md:right-10 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-              <p className="text-3xl font-heading font-bold">15+</p>
+              <p className="text-3xl font-heading font-bold">3</p>
               <p className="text-sm opacity-90">Years Experience</p>
             </div>
           </div>
@@ -31,8 +31,8 @@ const DoctorsHighlight = () => {
               Spine & Pain Management Specialist
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Dr. Vamshi is a renowned spine specialist in Hyderabad with over
-              15 years of experience in treating complex spine conditions and
+              Dr. Vamshi is a renowned spine specialist in Hyderabad with 3
+              years of experience in treating complex spine conditions and
               chronic pain. He combines advanced interventional techniques with
               a patient-centered approach to deliver lasting relief.
             </p>

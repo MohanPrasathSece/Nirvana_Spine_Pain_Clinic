@@ -66,11 +66,11 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex lg:items-center lg:gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919000004992"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 90000 04992</span>
             </a>
             <Button asChild>
               <Link to="/contact#book-appointment">Book Appointment</Link>

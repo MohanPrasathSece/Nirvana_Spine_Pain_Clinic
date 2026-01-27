@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Target, Eye, Heart, Award, GraduationCap } from "lucide-react";
-const doctorPortrait = "/image/procedure-3.jpg";
+const doctorPortrait = "/image/vamshiimage.png";
 import clinicInterior from "@/assets/clinic.jpg";
 
 const values = [
@@ -29,8 +29,8 @@ const values = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years of Experience" },
-  { value: "10K+", label: "Patients Treated" },
+  { value: "3", label: "Years of Experience" },
+  { value: "1K+", label: "Patients Treated" },
   { value: "95%", label: "Success Rate" },
   { value: "1", label: "Dedicated Specialist" },
 ];
@@ -66,7 +66,7 @@ const About = () => {
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Dr. Vamshi is a renowned spine and pain management specialist
-                  in Hyderabad with over 15 years of experience. He has dedicated
+                  in Hyderabad with 3 years of experience. He has dedicated
                   his career to helping patients find relief from chronic pain
                   through advanced interventional techniques.
                 </p>
@@ -274,7 +274,7 @@ const About = () => {
                 <Link to="/contact#book-appointment">Book Appointment</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <a href="tel:+919876543210">Call +91 98765 43210</a>
+                <a href="tel:+919000004992">Call +91 90000 04992</a>
               </Button>
             </div>
           </div>

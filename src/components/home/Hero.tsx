@@ -39,7 +39,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="gap-2 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              <a href="tel:+919876543210">
+              <a href="tel:+919000004992">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -49,8 +49,8 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: "15+", label: "Years Experience" },
-              { value: "10K+", label: "Patients Treated" },
+              { value: "3", label: "Years Experience" },
+              { value: "1k+", label: "Patients Treated" },
               { value: "95%", label: "Success Rate" },
             ].map((stat) => (
               <div key={stat.label}>

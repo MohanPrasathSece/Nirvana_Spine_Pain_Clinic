@@ -5,7 +5,7 @@ const features = [
   {
     icon: Shield,
     title: "Expert Specialist",
-    description: "Dr. Vamshi brings 15+ years of specialized experience in spine and pain management.",
+    description: "Dr. Vamshi brings 3 years of specialized experience in spine and pain management.",
   },
   {
     icon: Award,
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
               className="rounded-2xl shadow-lg w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg hidden md:block">
-              <p className="text-4xl font-heading font-bold">10k+</p>
+              <p className="text-4xl font-heading font-bold">1k+</p>
               <p className="text-sm">Patients Treated</p>
             </div>
           </div>

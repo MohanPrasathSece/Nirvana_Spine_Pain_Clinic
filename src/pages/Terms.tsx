@@ -9,7 +9,7 @@ const Terms = () => {
             <h1 className="text-4xl font-heading font-bold text-foreground mb-8">
               Terms of Service
             </h1>
-            
+
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p className="text-lg">
                 Last updated: January 2024
@@ -19,8 +19,8 @@ const Terms = () => {
                 Acceptance of Terms
               </h2>
               <p>
-                By accessing or using the Nirvana Spine & Pain Clinic website and 
-                services, you agree to be bound by these Terms of Service. If you 
+                By accessing or using the Nirvana Spine & Pain Clinic website and
+                services, you agree to be bound by these Terms of Service. If you
                 do not agree to these terms, please do not use our services.
               </p>
 
@@ -28,9 +28,9 @@ const Terms = () => {
                 Medical Disclaimer
               </h2>
               <p>
-                The information provided on this website is for general informational 
-                purposes only and should not be considered as medical advice. Always 
-                consult with Dr. Vamshi or another qualified healthcare provider for 
+                The information provided on this website is for general informational
+                purposes only and should not be considered as medical advice. Always
+                consult with Dr. Vamshi or another qualified healthcare provider for
                 proper diagnosis and treatment.
               </p>
 
@@ -62,8 +62,8 @@ const Terms = () => {
                 Intellectual Property
               </h2>
               <p>
-                All content on this website, including text, images, logos, and 
-                graphics, is the property of Nirvana Spine & Pain Clinic and is 
+                All content on this website, including text, images, logos, and
+                graphics, is the property of Nirvana Spine & Pain Clinic and is
                 protected by copyright laws.
               </p>
 
@@ -71,8 +71,8 @@ const Terms = () => {
                 Limitation of Liability
               </h2>
               <p>
-                Nirvana Spine & Pain Clinic shall not be liable for any indirect, 
-                incidental, special, or consequential damages arising from your use 
+                Nirvana Spine & Pain Clinic shall not be liable for any indirect,
+                incidental, special, or consequential damages arising from your use
                 of the website or services.
               </p>
 
@@ -80,7 +80,7 @@ const Terms = () => {
                 Changes to Terms
               </h2>
               <p>
-                We reserve the right to modify these Terms of Service at any time. 
+                We reserve the right to modify these Terms of Service at any time.
                 Changes will be effective immediately upon posting to the website.
               </p>
 
@@ -92,7 +92,7 @@ const Terms = () => {
               </p>
               <p>
                 Email: info@nirvanaspine.com<br />
-                Phone: +91 98765 43210<br />
+                Phone: +91 90000 04992<br />
                 Address: 123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
               </p>
             </div>

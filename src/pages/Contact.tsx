@@ -134,8 +134,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Call Us</h3>
                       <p className="text-muted-foreground mb-1">Mon-Sat from 9am to 7pm</p>
-                      <a href="tel:+919876543210" className="text-primary font-medium hover:underline">
-                        +91 98765 43210
+                      <a href="tel:+919000004992" className="text-primary font-medium hover:underline">
+                        +91 90000 04992
                       </a>
                     </div>
                   </div>
@@ -262,7 +262,7 @@ const Contact = () => {
                           phone: e.target.value,
                         })
                       }
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 90000 04992"
                       required
                     />
                   </div>
@@ -380,7 +380,7 @@ const Contact = () => {
                       onChange={(e) =>
                         setContactForm({ ...contactForm, phone: e.target.value })
                       }
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 90000 04992"
                     />
                   </div>
                 </div>

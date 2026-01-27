@@ -9,7 +9,7 @@ const Privacy = () => {
             <h1 className="text-4xl font-heading font-bold text-foreground mb-8">
               Privacy Policy
             </h1>
-            
+
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p className="text-lg">
                 Last updated: January 2024
@@ -19,9 +19,9 @@ const Privacy = () => {
                 Introduction
               </h2>
               <p>
-                Nirvana Spine & Pain Clinic ("we," "our," or "us") is committed to 
-                protecting your privacy. This Privacy Policy explains how we collect, 
-                use, disclose, and safeguard your information when you visit our 
+                Nirvana Spine & Pain Clinic ("we," "our," or "us") is committed to
+                protecting your privacy. This Privacy Policy explains how we collect,
+                use, disclose, and safeguard your information when you visit our
                 website or use our services.
               </p>
 
@@ -52,8 +52,8 @@ const Privacy = () => {
                 Data Security
               </h2>
               <p>
-                We implement appropriate security measures to protect your personal 
-                information. However, no method of transmission over the internet is 
+                We implement appropriate security measures to protect your personal
+                information. However, no method of transmission over the internet is
                 100% secure, and we cannot guarantee absolute security.
               </p>
 
@@ -76,7 +76,7 @@ const Privacy = () => {
               </p>
               <p>
                 Email: info@nirvanaspine.com<br />
-                Phone: +91 98765 43210<br />
+                Phone: +91 90000 04992<br />
                 Address: 123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
               </p>
             </div>
