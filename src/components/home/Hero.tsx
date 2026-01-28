@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Phone, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 
+import Counter from "@/components/ui/counter";
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden">
@@ -39,7 +41,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="gap-2 bg-transparent border-primary/20 hover:bg-primary/5">
-              <a href="tel:+919000004992">
+              <a href="tel:+919392834992">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -49,13 +51,13 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: "3", label: "Years Experience" },
-              { value: "1k+", label: "Patients Treated" },
-              { value: "95%", label: "Success Rate" },
+              { value: 3, label: "Years Experience", suffix: "" },
+              { value: 1000, label: "Patients Treated", suffix: "+" },
+              { value: 95, label: "Success Rate", suffix: "%" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl md:text-4xl font-heading font-bold text-primary">
-                  {stat.value}
+                  <Counter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
               </div>

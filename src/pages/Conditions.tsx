@@ -182,10 +182,10 @@ const Conditions = () => {
               </Link>
             </Button>
             <a
-              href="tel:+919000004992"
+              href="tel:+919392834992"
               className="text-white font-medium hover:underline flex items-center gap-2"
             >
-              Call Us: +91 90000 04992
+              Call Us: +91 93928 34992
             </a>
           </div>
         </div>

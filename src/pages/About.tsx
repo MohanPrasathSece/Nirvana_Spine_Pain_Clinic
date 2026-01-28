@@ -274,7 +274,7 @@ const About = () => {
                 <Link to="/contact#book-appointment">Book Appointment</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <a href="tel:+919000004992">Call +91 90000 04992</a>
+                <a href="tel:+919392834992">Call +91 93928 34992</a>
               </Button>
             </div>
           </div>

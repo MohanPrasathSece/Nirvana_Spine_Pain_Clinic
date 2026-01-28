@@ -76,7 +76,7 @@ const Privacy = () => {
               </p>
               <p>
                 Email: nirvanapainclinic@gmail.com<br />
-                Phone: +91 90000 04992<br />
+                Phone: +91 93928 34992<br />
                 Address: 123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
               </p>
             </div>
