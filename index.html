@@ -50,8 +50,14 @@
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Nirvana Spine & Pain Clinic",
-      "image": "https://nirvanaspine.com/logo-nobg.png",
-      "@id": "https://nirvanaspine.com/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://nirvanaspine.com/logo-nobg.png",
+        "width": "512",
+        "height": "512"
+      },
+      "logo": "https://nirvanaspine.com/logo-nobg.png",
+      "@id": "https://nirvanaspine.com/#business",
       "url": "https://nirvanaspine.com/",
       "telephone": "+919392834992",
       "address": {
@@ -66,6 +72,80 @@
         "@type": "GeoCoordinates",
         "latitude": 17.435171,
         "longitude": 78.411557
+      },
+      "areaServed": [
+        "Jubilee Hills",
+        "Banjara Hills",
+        "Madhapur",
+        "Gachibowli",
+        "Hitech City",
+        "Kondapur",
+        "Kukatpally",
+        "Manikonda",
+        "Panjagutta",
+        "Hyderabad"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pain Management Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sciatica Treatment Hyderabad"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Slip Disc Non-Surgical Relief"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Back Pain Specialist Jubilee Hills"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Neck Pain Management Banjara Hills"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chronic Pain Therapy Hitech City"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "RF Ablation for Pain Gachibowli"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Epidural Steroid Injections"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Spinal Stenosis Treatment"
+            }
+          }
+        ]
       },
       "openingHoursSpecification": [
         {
@@ -87,8 +167,12 @@
         "https://www.instagram.com/nirvanaspine"
       ],
       "priceRange": "$$",
-      "description": "Nirvana Spine & Pain Clinic is the leading center for spine care and pain management in Hyderabad, offering advanced treatments for chronic pain.",
-     "medicalSpecialty": ["PainManagement", "Rheumatologic", "Neurological"]
+      "description": "Nirvana Spine & Pain Clinic is the leading center for spine care and pain management in Hyderabad, offering advanced treatments for chronic pain including sciatica, slip disc, and back pain.",
+      "medicalSpecialty": [
+        "PainManagement",
+        "Rheumatologic",
+        "Neurological"
+      ]
     }
   </script>
 
@@ -98,7 +182,17 @@
       "@context": "https://schema.org",
       "@type": "Physician",
       "name": "Dr Vamshi Bharadwaj",
-      "image": "https://nirvanaspine.com/image/vamshiimage.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://nirvanaspine.com/image/vamshiimage.png",
+        "name": "Dr Vamshi Bharadwaj Portrait",
+        "caption": "Dr Vamshi Bharadwaj - Leading Spine Specialist in Hyderabad"
+      },
+      "@id": "https://nirvanaspine.com/#doctor",
+      "memberOf": {
+        "@id": "https://nirvanaspine.com/#business"
+      },
+      "url": "https://nirvanaspine.com/about",
       "medicalSpecialty": "Pain Management Specialist",
       "description": "Dr Vamshi Bharadwaj is a renowned spine and pain management specialist in Hyderabad with over 3 years of experience in interventional pain techniques.",
       "address": {
@@ -109,7 +203,8 @@
         "postalCode": "500033",
         "addressCountry": "IN"
       },
-      "telephone": "+919392834992"
+      "telephone": "+919392834992",
+      "knowsAbout": ["Sciatica", "Slip Disc", "Back Pain", "Neck Pain", "Radiofrequency Ablation", "Epidural Steroid Injection"]
     }
   </script>
 
