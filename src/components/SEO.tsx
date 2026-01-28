@@ -28,7 +28,7 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, typ
         }
 
         // Update Canonical Link
-        const canonicalUrl = canonical || `https://nirvanaspine.com${window.location.pathname}`;
+        const canonicalUrl = canonical || `https://nirvanapainclinic.com${window.location.pathname}`;
         let linkCanonical = document.querySelector('link[rel="canonical"]');
         if (linkCanonical) {
             linkCanonical.setAttribute("href", canonicalUrl);
@@ -54,7 +54,7 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, typ
             "url": canonicalUrl,
             "lastReviewed": new Date().toISOString().split('T')[0],
             "reviewedBy": {
-                "@id": "https://nirvanaspine.com/#doctor"
+                "@id": "https://nirvanapainclinic.com/#doctor"
             },
             "medicalSpecialty": "Interventional Pain Management"
         };
@@ -69,7 +69,7 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, typ
                     "@type": "ListItem",
                     "position": index + 1,
                     "name": crumb.name,
-                    "item": crumb.item.startsWith("http") ? crumb.item : `https://nirvanaspine.com${crumb.item}`
+                    "item": crumb.item.startsWith("http") ? crumb.item : `https://nirvanapainclinic.com${crumb.item}`
                 }))
             };
             schemas.push(breadcrumbSchema);

@@ -58,7 +58,7 @@ const Gallery = () => {
         "description": "State-of-the-art facilities for interventional pain management in Hyderabad.",
         "image": galleryImages.map(img => ({
             "@type": "ImageObject",
-            "contentUrl": `https://nirvanaspine.com${img.src}`,
+            "contentUrl": `https://nirvanapainclinic.com${img.src}`,
             "name": img.title,
             "description": img.description,
             "caption": img.alt
@@ -70,7 +70,7 @@ const Gallery = () => {
         "@type": "MedicalProcedure",
         "name": img.title,
         "description": img.description,
-        "image": `https://nirvanaspine.com${img.src}`,
+        "image": `https://nirvanapainclinic.com${img.src}`,
         "procedureType": "Interventional Pain Management"
     }));
 

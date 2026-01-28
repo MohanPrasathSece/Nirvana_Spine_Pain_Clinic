@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nirvanaspine.com/sitemap.xml
+Sitemap: https://nirvanapainclinic.com/sitemap.xml
