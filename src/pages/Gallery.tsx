@@ -51,12 +51,37 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
+    const gallerySchema = {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Nirvana Spine & Pain Clinic Facilities",
+        "description": "State-of-the-art facilities for interventional pain management in Hyderabad.",
+        "image": galleryImages.map(img => ({
+            "@type": "ImageObject",
+            "contentUrl": `https://nirvanaspine.com${img.src}`,
+            "name": img.title,
+            "description": img.description,
+            "caption": img.alt
+        }))
+    };
+
+    const procedureSchemas = galleryImages.map(img => ({
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": img.title,
+        "description": img.description,
+        "image": `https://nirvanaspine.com${img.src}`,
+        "procedureType": "Interventional Pain Management"
+    }));
+
     return (
         <Layout>
             <SEO
                 title="Clinic Gallery | Top Facilities & Procedures in Hyderabad | Nirvana Spine"
                 description="View our state-of-the-art pain clinic facilities and advanced interventional procedure rooms in Hyderabad. See how we treat spine conditions."
                 keywords="Pain Clinic Gallery Hyderabad, Spine Treatment Photos, Nirvana Spine Clinic Facilities"
+                schema={[gallerySchema, ...procedureSchemas]}
+                type="MedicalWebPage"
                 breadcrumbs={[
                     { name: "Home", item: "/" },
                     { name: "Gallery", item: "/gallery" }

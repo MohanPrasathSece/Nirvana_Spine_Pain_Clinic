@@ -14,6 +14,7 @@ const Index = () => {
         title="Best Pain Clinic in Hyderabad | Nirvana Spine & Pain Clinic | Dr Vamshi Bharadwaj"
         description="Nirvana Spine & Pain Clinic is the #1 rated pain management center in Hyderabad. Specialized in non-surgical treatment for back pain, neck pain, sciatica, slip disc, and chronic pain by Dr Vamshi Bharadwaj."
         keywords="Best Pain Clinic in Hyderabad, Top Pain Specialist Hyderabad, Spine Clinic Hyderabad, Back Pain Treatment Hyderabad, Sciatica Relief Hyderabad, Dr Vamshi Bharadwaj"
+        type="MedicalWebPage"
         breadcrumbs={[
           { name: "Home", item: "/" }
         ]}

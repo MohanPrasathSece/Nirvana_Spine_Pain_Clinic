@@ -104,6 +104,7 @@ const Contact = () => {
         description="Book your consultation with Dr Vamshi Bharadwaj at Nirvana Spine & Pain Clinic, the leading pain management center in Hyderabad. Visit us for expert spine care."
         keywords="Book Appointment Pain Clinic Hyderabad, Contact Spine Specialist Hyderabad, Dr Vamshi Bharadwaj Contact"
         schema={faqSchema}
+        type="ContactPage"
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Contact", item: "/contact" }

@@ -94,20 +94,33 @@ const conditionSections = [
 ];
 
 const Conditions = () => {
-  const medicalSchema = conditionSections.map(section => ({
-    "@context": "https://schema.org",
-    "@type": "MedicalCondition",
-    "name": section.title,
-    "description": section.description,
-    "associatedAnatomy": {
-      "@type": "AnatomicalStructure",
-      "name": section.title.includes("Spine") ? "Spine" : "Joints"
-    },
-    "possibleTreatment": section.items.map(item => ({
-      "@type": "MedicalIntervention",
-      "name": item
-    }))
-  }));
+  const medicalSchema = conditionSections.map(section => {
+    // SNOMED-CT / ICD-10 Mappings
+    const codeMap: Record<string, string> = {
+      "Back Pain": "SNOMED-CT: 22253000, ICD-10: M54.5",
+      "Neck Pain": "SNOMED-CT: 71181003, ICD-10: M54.2",
+      "Sciatica & Leg Pain": "SNOMED-CT: 23056005, ICD-10: M54.3",
+      "Slip Disc (Herniated Disc)": "SNOMED-CT: 258321008, ICD-10: M51.2",
+      "Spinal Stenosis": "SNOMED-CT: 14760008, ICD-10: M48.0",
+      "Joint & Arthritis Pain": "SNOMED-CT: 3723001, ICD-10: M19"
+    };
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "MedicalCondition",
+      "name": section.title,
+      "description": section.description,
+      "code": codeMap[section.title] || "",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": section.title.includes("Spine") || section.title.includes("Back") || section.title.includes("Neck") ? "Spine" : "Joints"
+      },
+      "possibleTreatment": section.items.map(item => ({
+        "@type": "MedicalIntervention",
+        "name": item
+      }))
+    };
+  });
 
   return (
     <Layout>

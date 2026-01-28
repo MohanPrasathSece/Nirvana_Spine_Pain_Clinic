@@ -44,6 +44,7 @@ const About = () => {
         title="About Dr Vamshi Bharadwaj | Best Spine Specialist in Hyderabad"
         description="Learn about Dr Vamshi Bharadwaj, a leading spine and pain management specialist in Hyderabad. Focused on interventional pain techniques for chronic relief."
         keywords="Dr Vamshi Bharadwaj, Spine Specialist Hyderabad, Pain Management Expert Hyderabad, Nirvana Spine Clinic Founders"
+        type="AboutPage"
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "About", item: "/about" }

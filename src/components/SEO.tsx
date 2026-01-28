@@ -7,9 +7,10 @@ interface SEOProps {
     schema?: object | object[];
     breadcrumbs?: { name: string; item: string }[];
     canonical?: string;
+    type?: "WebPage" | "MedicalWebPage" | "AboutPage" | "ContactPage";
 }
 
-const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical }: SEOProps) => {
+const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, type = "MedicalWebPage" }: SEOProps) => {
     useEffect(() => {
         // Update Title
         document.title = title;
@@ -43,6 +44,21 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical }: S
         existingScripts.forEach(script => script.remove());
 
         const schemas = Array.isArray(schema) ? [...schema] : (schema ? [schema] : []);
+
+        // Add MedicalWebPage Authority Wrapper
+        const pageSchema = {
+            "@context": "https://schema.org",
+            "@type": type,
+            "name": title,
+            "description": description,
+            "url": canonicalUrl,
+            "lastReviewed": new Date().toISOString().split('T')[0],
+            "reviewedBy": {
+                "@id": "https://nirvanaspine.com/#doctor"
+            },
+            "medicalSpecialty": "Interventional Pain Management"
+        };
+        schemas.push(pageSchema);
 
         // Add Breadcrumb Schema
         if (breadcrumbs) {

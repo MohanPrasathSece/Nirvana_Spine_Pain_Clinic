@@ -85,16 +85,31 @@ const treatmentSections = [
 ];
 
 const Treatment = () => {
-  const treatmentSchema = treatmentSections.map(section => ({
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": section.title,
-    "description": section.description,
-    "procedureType": {
-      "@type": "MedicalSpecialty",
-      "name": "Interventional Pain Management"
-    }
-  }));
+  const treatmentSchema = treatmentSections.map(section => {
+    // SNOMED-CT codes for procedures
+    const codeMap: Record<string, string> = {
+      "Epidural Injections": "SNOMED-CT: 230862001",
+      "Nerve Blocks": "SNOMED-CT: 50731000",
+      "Radiofrequency Ablation": "SNOMED-CT: 444315007",
+      "Physiotherapy & Rehabilitation": "SNOMED-CT: 91251008"
+    };
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": section.title,
+      "description": section.description,
+      "code": codeMap[section.title] || "",
+      "procedureType": {
+        "@type": "MedicalSpecialty",
+        "name": "Interventional Pain Management"
+      },
+      "relevantSpecialty": {
+        "@type": "MedicalSpecialty",
+        "name": "Pain Management"
+      }
+    };
+  });
 
   return (
     <Layout>
