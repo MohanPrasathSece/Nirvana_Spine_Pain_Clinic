@@ -6,9 +6,10 @@ interface SEOProps {
     keywords?: string;
     schema?: object | object[];
     breadcrumbs?: { name: string; item: string }[];
+    canonical?: string;
 }
 
-const SEO = ({ title, description, keywords, schema, breadcrumbs }: SEOProps) => {
+const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical }: SEOProps) => {
     useEffect(() => {
         // Update Title
         document.title = title;
@@ -23,6 +24,18 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs }: SEOProps) =>
         let metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
             metaKeywords.setAttribute("content", keywords || "");
+        }
+
+        // Update Canonical Link
+        const canonicalUrl = canonical || `https://nirvanaspine.com${window.location.pathname}`;
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (linkCanonical) {
+            linkCanonical.setAttribute("href", canonicalUrl);
+        } else {
+            linkCanonical = document.createElement("link");
+            linkCanonical.setAttribute("rel", "canonical");
+            linkCanonical.setAttribute("href", canonicalUrl);
+            document.head.appendChild(linkCanonical);
         }
 
         // Schema handling
@@ -60,7 +73,7 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs }: SEOProps) =>
         return () => {
             // Cleanup logic if needed
         };
-    }, [title, description, keywords, schema, breadcrumbs]);
+    }, [title, description, keywords, schema, breadcrumbs, canonical]);
 
     return null;
 };
