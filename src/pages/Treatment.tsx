@@ -103,6 +103,10 @@ const Treatment = () => {
         description="Advanced non-surgical procedures for spine and joint pain in Hyderabad. Minimally invasive treatments including RFA, Nerve Blocks, and Epidural Injections."
         keywords="Pain Management Procedures Hyderabad, Non-Surgical Spine Treatment, RF Ablation Hyderabad, Nerve Block Treatment"
         schema={treatmentSchema}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Treatments", item: "/treatment" }
+        ]}
       />
       {/* Hero */}
       <section className="bg-secondary section-padding relative overflow-hidden">

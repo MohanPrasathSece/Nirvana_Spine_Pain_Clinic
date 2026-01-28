@@ -5,9 +5,10 @@ interface SEOProps {
     description: string;
     keywords?: string;
     schema?: object | object[];
+    breadcrumbs?: { name: string; item: string }[];
 }
 
-const SEO = ({ title, description, keywords, schema }: SEOProps) => {
+const SEO = ({ title, description, keywords, schema, breadcrumbs }: SEOProps) => {
     useEffect(() => {
         // Update Title
         document.title = title;
@@ -24,13 +25,28 @@ const SEO = ({ title, description, keywords, schema }: SEOProps) => {
             metaKeywords.setAttribute("content", keywords || "");
         }
 
-        // Insert JSON-LD Schema
-        if (schema) {
-            const existingScripts = document.querySelectorAll('script[type="application/ld+json"].dynamic-schema');
-            existingScripts.forEach(script => script.remove());
+        // Schema handling
+        const existingScripts = document.querySelectorAll('script[type="application/ld+json"].dynamic-schema');
+        existingScripts.forEach(script => script.remove());
 
-            const schemas = Array.isArray(schema) ? schema : [schema];
+        const schemas = Array.isArray(schema) ? [...schema] : (schema ? [schema] : []);
 
+        // Add Breadcrumb Schema
+        if (breadcrumbs) {
+            const breadcrumbSchema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": breadcrumbs.map((crumb, index) => ({
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "name": crumb.name,
+                    "item": crumb.item.startsWith("http") ? crumb.item : `https://nirvanaspine.com${crumb.item}`
+                }))
+            };
+            schemas.push(breadcrumbSchema);
+        }
+
+        if (schemas.length > 0) {
             schemas.forEach(s => {
                 const script = document.createElement("script");
                 script.type = "application/ld+json";
@@ -42,9 +58,9 @@ const SEO = ({ title, description, keywords, schema }: SEOProps) => {
 
         // Cleanup on unmount
         return () => {
-            // document.title = "Nirvana Spine & Pain Clinic | Hyderabad"; // Default title
+            // Cleanup logic if needed
         };
-    }, [title, description, keywords, schema]);
+    }, [title, description, keywords, schema, breadcrumbs]);
 
     return null;
 };

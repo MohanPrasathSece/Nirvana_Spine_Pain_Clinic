@@ -18,6 +18,8 @@ const Hero = () => {
           src={heroImage}
           alt="Spine specialist treating patient"
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
       </div>

@@ -116,6 +116,10 @@ const Conditions = () => {
         description="Providing expert treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced non-surgical pain management for lasting relief."
         keywords="Sciatica Treatment Hyderabad, Slip Disc Treatment Hyderabad, Back Pain Relief, Neck Pain Specialists Hyderabad"
         schema={medicalSchema}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Conditions", item: "/conditions" }
+        ]}
       />
       {/* Hero */}
       <section className="bg-secondary section-padding relative overflow-hidden">

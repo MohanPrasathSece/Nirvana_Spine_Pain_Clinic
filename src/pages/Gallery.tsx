@@ -57,6 +57,10 @@ const Gallery = () => {
                 title="Clinic Gallery | Top Facilities & Procedures in Hyderabad | Nirvana Spine"
                 description="View our state-of-the-art pain clinic facilities and advanced interventional procedure rooms in Hyderabad. See how we treat spine conditions."
                 keywords="Pain Clinic Gallery Hyderabad, Spine Treatment Photos, Nirvana Spine Clinic Facilities"
+                breadcrumbs={[
+                    { name: "Home", item: "/" },
+                    { name: "Gallery", item: "/gallery" }
+                ]}
             />
             {/* Hero */}
             <section className="bg-secondary section-padding">
