@@ -40,6 +40,11 @@
   }
   </script>
 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Nirvana Spine">
+  <meta name="theme-color" content="#0f172a">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nirvanapainclinic.com/" />
@@ -137,18 +142,15 @@
           "/html/head/meta[@name='description']/@content"
         ]
       },
-      "areaServed": [
-        "Jubilee Hills",
-        "Banjara Hills",
-        "Madhapur",
-        "Gachibowli",
-        "Hitech City",
-        "Kondapur",
-        "Kukatpally",
-        "Manikonda",
-        "Panjagutta",
-        "Hyderabad"
-      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 17.435171,
+          "longitude": 78.411557
+        },
+        "geoRadius": "25000"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Pain Management Services",

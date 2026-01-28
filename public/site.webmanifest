@@ -26,5 +26,29 @@
         "medical",
         "health"
     ],
+    "shortcuts": [
+        {
+            "name": "Book Appointment",
+            "short_name": "Book",
+            "url": "/contact#book-appointment",
+            "icons": [
+                {
+                    "src": "/favicon.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Call Clinic",
+            "short_name": "Call",
+            "url": "tel:+919392834992",
+            "icons": [
+                {
+                    "src": "/favicon.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
     "lang": "en-IN"
 }
