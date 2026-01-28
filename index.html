@@ -28,6 +28,18 @@
   <meta name="geo.position" content="17.435171;78.411557" />
   <meta name="ICBM" content="17.435171, 78.411557" />
 
+  <!-- Speculative Pre-rendering (Ultra-Rare Performance Signal) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "source": "list",
+        "urls": ["/about", "/conditions", "/treatment", "/contact", "/gallery"]
+      }
+    ]
+  }
+  </script>
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nirvanapainclinic.com/" />
@@ -55,6 +67,13 @@
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Nirvana Spine & Pain Clinic",
+      "additionalType": [
+        "http://www.wikidata.org/entity/Q16917", 
+        "http://www.wikidata.org/entity/Q10309",
+        "https://schema.org/Hospital",
+        "https://schema.org/MedicalClinic"
+      ],
+      "disambiguatingDescription": "Top-rated Pain Management Hospital in Hyderabad. Best Spine Clinic in Jubilee Hills. Specialized medical center for Sciatica, Slip Disc, and Back Pain. Closest multispecialty hospital for chronic pain relief near me in Banjara Hills, Gachibowli, and Madhapur.",
       "image": {
         "@type": "ImageObject",
         "url": "https://nirvanapainclinic.com/logo-nobg.png",
@@ -65,6 +84,11 @@
       "@id": "https://nirvanapainclinic.com/#business",
       "url": "https://nirvanapainclinic.com/",
       "telephone": "+919392834992",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://nirvanapainclinic.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+919392834992",
@@ -278,21 +302,60 @@
         "addressCountry": "IN"
       },
       "telephone": "+919392834992",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "NTR University of Health Sciences",
+        "sameAs": "http://www.wikidata.org/entity/Q6952877"
+      },
+      "credential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "MBBS",
+          "credentialCategory": "Medical Degree"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "DNB (Orthopaedic Surgery)",
+          "credentialCategory": "Post Graduate Degree"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "FIP (Fellow in Interventional Pain Management)",
+          "credentialCategory": "Specialization Fellowship"
+        }
+      ],
       "knowsAbout": [
-        "Sciatica", "Slip Disc", "Herniated Nucleus Pulposus", "Lumbar Radiculopathy", "Cervical Spondylosis",
-        "Chronic Back Pain", "Degenerative Disc Disease", "Spinal Stenosis", "Facet Joint Arthropathy",
-        "Sacroiliac Joint Dysfunction", "Neuropathic Pain", "Complex Regional Pain Syndrome (CRPS)",
-        "Post-Laminectomy Syndrome", "Failed Back Surgery Syndrome", "Trigeminal Neuralgia",
-        "Occipital Neuralgia", "Cancer Pain Management", "Myofascial Pain Syndrome", "Fibromyalgia",
-        "Osteoarthritis", "Rheumatoid Arthritis Pain", "Phantom Limb Pain", "Pelvic Pain",
-        "Radiofrequency Ablation (RFA)", "Epidural Steroid Injection (ESI)", "Selective Nerve Root Block (SNRB)",
-        "Facet Joint Injections", "Medial Branch Block", "Lumbar Sympathetic Block", "Stellate Ganglion Block",
-        "Celiac Plexus Block", "Trigger Point Injections", "Platelet-Rich Plasma (PRP) Therapy",
-        "Stem Cell Therapy", "Spinal Cord Stimulation (SCS)", "Intrathecal Pump Therapy",
-        "Interventional Pain Management", "Minimally Invasive Spine Procedures", "Neuromodulation",
-        "Pulsed Radiofrequency", "Discography", "Vertebroplasty", "Kyphoplasty", "Ozone Therapy",
-        "Cryoablation", "Botulinum Toxin Injections for Pain", "Musculoskeletal Ultrasound",
-        "Fluoroscopy-Guided Injections", "Pain Psychology", "Alternative Pain Relief"
+        {
+          "@type": "MedicalCondition",
+          "name": "Sciatica",
+          "sameAs": "http://www.wikidata.org/entity/Q193633"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Herniated Disc",
+          "sameAs": "http://www.wikidata.org/entity/Q551676"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Lumbar Radiculopathy",
+          "sameAs": "http://www.wikidata.org/entity/Q2919329"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Spinal Stenosis",
+          "sameAs": "http://www.wikidata.org/entity/Q7577587"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Radiofrequency Ablation",
+          "sameAs": "http://www.wikidata.org/entity/Q2126442"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Epidural Steroid Injection",
+          "sameAs": "http://www.wikidata.org/entity/Q610996"
+        },
+        "Back Pain", "Neck Pain", "Neuropathic Pain", "Chronic Pain", "Minimally Invasive Spine Procedures"
       ],
       "medicalAudience": {
         "@type": "MedicalAudience",

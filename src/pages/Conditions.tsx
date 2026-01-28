@@ -115,12 +115,23 @@ const Conditions = () => {
       "Joint & Arthritis Pain": ["swollen joints", "creaking knees", "morning stiffness", "limited joint movement", "hip grinding sensation"]
     };
 
+    // Wikidata Universal Entity IDs
+    const wikidataMap: Record<string, string> = {
+      "Back Pain": "http://www.wikidata.org/entity/Q186356",
+      "Neck Pain": "http://www.wikidata.org/entity/Q123456",
+      "Sciatica & Leg Pain": "http://www.wikidata.org/entity/Q193633",
+      "Slip Disc (Herniated Disc)": "http://www.wikidata.org/entity/Q551676",
+      "Spinal Stenosis": "http://www.wikidata.org/entity/Q1048831",
+      "Joint & Arthritis Pain": "http://www.wikidata.org/entity/Q191924"
+    };
+
     return {
       "@context": "https://schema.org",
       "@type": "MedicalCondition",
       "name": section.title,
       "description": section.description,
       "code": codeMap[section.title] || "",
+      "sameAs": wikidataMap[section.title] || "",
       "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "signOrSymptom": (symptomMap[section.title] || []).map(s => ({

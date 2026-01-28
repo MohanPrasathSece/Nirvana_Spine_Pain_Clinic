@@ -94,12 +94,21 @@ const Treatment = () => {
       "Physiotherapy & Rehabilitation": "SNOMED-CT: 91251008"
     };
 
+    // Wikidata codes for procedures
+    const wikidataMap: Record<string, string> = {
+      "Epidural Injections": "http://www.wikidata.org/entity/Q610996",
+      "Nerve Blocks": "http://www.wikidata.org/entity/Q699661",
+      "Radiofrequency Ablation": "http://www.wikidata.org/entity/Q2126442",
+      "Physiotherapy & Rehabilitation": "http://www.wikidata.org/entity/Q211116"
+    };
+
     return {
       "@context": "https://schema.org",
       "@type": "MedicalProcedure",
       "name": section.title,
       "description": section.description,
       "code": codeMap[section.title] || "",
+      "sameAs": wikidataMap[section.title] || "",
       "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "procedureType": {
