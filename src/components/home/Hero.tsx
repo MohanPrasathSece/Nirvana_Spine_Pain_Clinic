@@ -21,11 +21,12 @@ const Hero = () => {
       {/* Content */}
       <div className="relative container-medical py-24 md:py-32 lg:py-40">
         <div className="max-w-2xl">
-          <p className="text-2xl md:text-3xl font-extrabold text-primary mb-6 animate-fade-in tracking-tight">
-            Best Pain Clinic in Hyderabad
+          <p className="text-xl md:text-2xl font-bold text-primary mb-6 animate-fade-in tracking-tight">
+            Welcome to Nirvana Spine & Pain Clinic
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Advanced Spine Care & <span className="text-primary">Chronic Pain Relief.</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            Expert Spine Care.{" "}
+            <span className="text-primary">Pain-Free Living.</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Experience relief from chronic pain with Dr Vamshi Bharadwaj's specialized

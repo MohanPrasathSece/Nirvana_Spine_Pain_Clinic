@@ -51,7 +51,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2">About Us</p>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Best Pain Clinic in Hyderabad | Expert Spine Specialists
+              Your Trusted Spine & Pain Specialists in Hyderabad
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Nirvana Spine & Pain Clinic is dedicated to helping patients

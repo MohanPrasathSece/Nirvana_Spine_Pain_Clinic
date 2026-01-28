@@ -20,8 +20,8 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
-              Best pain clinic in Hyderabad specializing in advanced spine care and chronic pain management.
-              Dr Vamshi Bharadwaj offers non-surgical solutions for lasting relief.
+              Expert spine care and pain management in Hyderabad.
+              Dr Vamshi Bharadwaj provides personalized treatment for lasting relief.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3">

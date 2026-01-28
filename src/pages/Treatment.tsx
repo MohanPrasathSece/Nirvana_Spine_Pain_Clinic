@@ -98,7 +98,7 @@ const Treatment = () => {
 
   return (
     <Layout>
-      <SEO 
+      <SEO
         title="Non-Surgical Spine Care & Pain Procedures in Hyderabad | Nirvana Spine"
         description="Advanced non-surgical procedures for spine and joint pain in Hyderabad. Minimally invasive treatments including RFA, Nerve Blocks, and Epidural Injections."
         keywords="Pain Management Procedures Hyderabad, Non-Surgical Spine Treatment, RF Ablation Hyderabad, Nerve Block Treatment"
@@ -114,7 +114,7 @@ const Treatment = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Our Procedures</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6">
-              Non-Surgical Spine Care & Pain Procedures in Hyderabad
+              Treatments & Procedures
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We offer a comprehensive range of advanced, minimally invasive interventional procedures designed to target pain at its source and promote fast recovery.

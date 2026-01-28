@@ -51,7 +51,7 @@ const ServicesOverview = () => {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-primary font-medium mb-2">Our Services</p>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Advanced Pain Management in Hyderabad
+            Specialized Spine & Pain Treatments
           </h2>
           <p className="text-muted-foreground">
             We offer a comprehensive range of treatments for spine conditions

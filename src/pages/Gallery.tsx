@@ -64,10 +64,10 @@ const Gallery = () => {
                     <div className="max-w-3xl mx-auto text-center">
                         <p className="text-primary font-medium mb-2">Our Facilities & Procedures</p>
                         <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-                            Clinic Gallery & Facilities in Hyderabad
+                            Gallery
                         </h1>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Explore our state-of-the-art facilities and get a glimpse of the advanced procedures we perform to ensure your spinal health at the best pain clinic in Hyderabad.
+                            Explore our state-of-the-art facilities and get a glimpse of the advanced procedures we perform to ensure your spinal health.
                         </p>
                     </div>
                 </div>

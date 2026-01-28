@@ -127,7 +127,7 @@ const Conditions = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Our Expertise</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6">
-              Sciatica, Slip Disc & Back Pain Treatment in Hyderabad
+              Conditions We Treat
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We provide comprehensive diagnostic and personalized treatment plans for a wide range of acute and chronic pain conditions, helping you return to an active, pain-free life.

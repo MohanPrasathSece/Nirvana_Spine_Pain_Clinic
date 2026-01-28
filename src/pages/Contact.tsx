@@ -111,7 +111,7 @@ const Contact = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2">Contact Us</p>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Book Appointment | Top Pain Management Clinic in Hyderabad
+              Book Your Appointment
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Ready to take the first step towards a pain-free life? Contact us
