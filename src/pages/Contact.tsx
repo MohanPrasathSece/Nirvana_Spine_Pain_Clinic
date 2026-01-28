@@ -52,7 +52,10 @@ const Contact = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
+    "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
+    "datePublished": "2024-01-01",
+    "mainEntity": faqs.map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {

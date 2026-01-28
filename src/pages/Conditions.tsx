@@ -105,12 +105,28 @@ const Conditions = () => {
       "Joint & Arthritis Pain": "SNOMED-CT: 3723001, ICD-10: M19"
     };
 
+    // Symptom Mappings (Rare Discovery Keywords)
+    const symptomMap: Record<string, string[]> = {
+      "Back Pain": ["lower back stiffness", "sharp back pain", "muscle spasms", "aching back", "difficulty standing"],
+      "Neck Pain": ["upper back stiffness", "shooting shoulder pain", "neck immobility", "tension headache", "arm weakness"],
+      "Sciatica & Leg Pain": ["leg numbness", "electric shock sensation", "burning leg pain", "calf tingling", "shooting pain in buttocks"],
+      "Slip Disc (Herniated Disc)": ["pinched nerve pain", "sudden sharp pain", "limited range of motion", "disc bulge symptoms"],
+      "Spinal Stenosis": ["leg heaviness while walking", "cramping in legs", "pain that improves while leaning forward"],
+      "Joint & Arthritis Pain": ["swollen joints", "creaking knees", "morning stiffness", "limited joint movement", "hip grinding sensation"]
+    };
+
     return {
       "@context": "https://schema.org",
       "@type": "MedicalCondition",
       "name": section.title,
       "description": section.description,
       "code": codeMap[section.title] || "",
+      "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
+      "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
+      "signOrSymptom": (symptomMap[section.title] || []).map(s => ({
+        "@type": "MedicalSignOrSymptom",
+        "name": s
+      })),
       "associatedAnatomy": {
         "@type": "AnatomicalStructure",
         "name": section.title.includes("Spine") || section.title.includes("Back") || section.title.includes("Neck") ? "Spine" : "Joints"

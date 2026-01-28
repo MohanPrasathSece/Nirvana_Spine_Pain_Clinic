@@ -100,6 +100,8 @@ const Treatment = () => {
       "name": section.title,
       "description": section.description,
       "code": codeMap[section.title] || "",
+      "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
+      "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "procedureType": {
         "@type": "MedicalSpecialty",
         "name": "Interventional Pain Management"
