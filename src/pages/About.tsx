@@ -138,8 +138,9 @@ const About = () => {
             <div className="grid grid-cols-1 gap-4">
               <img
                 src={doctorPortrait}
-                alt="Dr Vamshi Bharadwaj - Spine Specialist"
-                className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
+                alt="Dr Vamshi Bharadwaj - Leading Spine & Pain Management Specialist at Nirvana Clinic"
+                className="rounded-2xl shadow-lg w-full max-max-w-md mx-auto"
+                loading="lazy"
               />
             </div>
           </div>
@@ -232,8 +233,9 @@ const About = () => {
             <div>
               <img
                 src={clinicInterior}
-                alt="Nirvana Spine & Pain Clinic Facility"
+                alt="Modern facility of Nirvana Spine & Pain Clinic in Hyderabad"
                 className="rounded-2xl shadow-lg w-full"
+                loading="lazy"
               />
             </div>
             <div>

@@ -26,26 +26,22 @@ const SEO = ({
         document.title = title;
 
         // Update Meta Description
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute("content", description);
-        } else {
-            const newMetaDescription = document.createElement("meta");
-            newMetaDescription.setAttribute("name", "description");
-            newMetaDescription.setAttribute("content", description);
-            document.head.appendChild(newMetaDescription);
-        }
+        updateOrCreateMeta("description", description);
+        updateOrCreateMeta("keywords", keywords || "");
 
-        // Update Meta Keywords
-        let metaKeywords = document.querySelector('meta[name="keywords"]');
-        if (metaKeywords) {
-            metaKeywords.setAttribute("content", keywords || "");
-        } else if (keywords) {
-            const newMetaKeywords = document.createElement("meta");
-            newMetaKeywords.setAttribute("name", "keywords");
-            newMetaKeywords.setAttribute("content", keywords);
-            document.head.appendChild(newMetaKeywords);
-        }
+        // Open Graph tags
+        updateOrCreateMeta("og:title", title, "property");
+        updateOrCreateMeta("og:description", description, "property");
+        updateOrCreateMeta("og:image", primaryImage, "property");
+        updateOrCreateMeta("og:url", canonical || `https://nirvanapainclinic.com${window.location.pathname}`, "property");
+        updateOrCreateMeta("og:type", "website", "property");
+        updateOrCreateMeta("og:site_name", "Nirvana Spine & Pain Clinic", "property");
+
+        // Twitter tags
+        updateOrCreateMeta("twitter:card", "summary_large_image");
+        updateOrCreateMeta("twitter:title", title);
+        updateOrCreateMeta("twitter:description", description);
+        updateOrCreateMeta("twitter:image", primaryImage);
 
         // Update Canonical Link
         const canonicalUrl = canonical || `https://nirvanapainclinic.com${window.location.pathname}`;
@@ -64,7 +60,6 @@ const SEO = ({
         existingScripts.forEach(script => script.remove());
         const schemas = Array.isArray(schema) ? [...schema] : (schema ? [schema] : []);
 
-        // Image Search Dominance (Rare Signal)
         const imageSchema = {
             "@context": "https://schema.org",
             "@type": "ImageObject",
@@ -99,7 +94,6 @@ const SEO = ({
         };
         schemas.push(imageSchema, pageSchema);
 
-        // Add Breadcrumb Schema
         if (breadcrumbs) {
             const breadcrumbSchema = {
                 "@context": "https://schema.org",
@@ -123,12 +117,20 @@ const SEO = ({
                 document.head.appendChild(script);
             });
         }
-
-        // Cleanup on unmount
-        return () => {
-            // Cleanup logic if needed
-        };
     }, [title, description, keywords, schema, breadcrumbs, canonical]);
+
+    const updateOrCreateMeta = (name: string, content: string, attr: "name" | "property" = "name") => {
+        if (!content) return;
+        let element = document.querySelector(`meta[${attr}="${name}"]`);
+        if (element) {
+            element.setAttribute("content", content);
+        } else {
+            element = document.createElement("meta");
+            element.setAttribute(attr, name);
+            element.setAttribute("content", content);
+            document.head.appendChild(element);
+        }
+    };
 
     return null;
 };

@@ -1,8 +1,17 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (
     <Layout>
+      <SEO
+        title="Terms of Service | Nirvana Spine & Pain Clinic Hyderabad"
+        description="Review the terms and conditions for using the services and website of Nirvana Spine & Pain Clinic."
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Terms of Service", item: "/terms" }
+        ]}
+      />
       <section className="section-padding">
         <div className="container-medical">
           <div className="max-w-3xl mx-auto">

@@ -1,8 +1,17 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <Layout>
+      <SEO
+        title="Privacy Policy | Nirvana Spine & Pain Clinic Hyderabad"
+        description="Read our privacy policy to understand how Nirvana Spine & Pain Clinic handles your personal and medical information."
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Privacy Policy", item: "/privacy" }
+        ]}
+      />
       <section className="section-padding">
         <div className="container-medical">
           <div className="max-w-3xl mx-auto">

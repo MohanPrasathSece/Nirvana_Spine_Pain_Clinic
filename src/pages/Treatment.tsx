@@ -170,8 +170,9 @@ const Treatment = () => {
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={section.image}
-                    alt={section.title}
+                    alt={`${section.title} procedure at Nirvana Spine & Pain Clinic Hyderabad`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-8 flex flex-col flex-grow">

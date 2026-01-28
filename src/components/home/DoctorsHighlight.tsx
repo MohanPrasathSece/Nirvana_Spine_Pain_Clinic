@@ -13,8 +13,9 @@ const DoctorsHighlight = () => {
             <div className="relative max-w-sm">
               <img
                 src={doctorPortrait}
-                alt="Dr Vamshi Bharadwaj - Spine Specialist"
+                alt="Dr Vamshi Bharadwaj - Best Spine and Pain Management Specialist in Hyderabad"
                 className="rounded-2xl shadow-lg w-full h-auto object-cover"
+                loading="lazy"
               />
               <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg md:-right-8">
                 <p className="text-2xl font-heading font-bold">3</p>
