@@ -8,9 +8,19 @@ interface SEOProps {
     breadcrumbs?: { name: string; item: string }[];
     canonical?: string;
     type?: "WebPage" | "MedicalWebPage" | "AboutPage" | "ContactPage";
+    primaryImage?: string;
 }
 
-const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, type = "MedicalWebPage" }: SEOProps) => {
+const SEO = ({
+    title,
+    description,
+    keywords,
+    schema,
+    breadcrumbs,
+    canonical,
+    type = "MedicalWebPage",
+    primaryImage = "https://nirvanapainclinic.com/logo-nobg.png"
+}: SEOProps) => {
     useEffect(() => {
         // Update Title
         document.title = title;
@@ -19,12 +29,22 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, typ
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.setAttribute("content", description);
+        } else {
+            const newMetaDescription = document.createElement("meta");
+            newMetaDescription.setAttribute("name", "description");
+            newMetaDescription.setAttribute("content", description);
+            document.head.appendChild(newMetaDescription);
         }
 
         // Update Meta Keywords
         let metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
             metaKeywords.setAttribute("content", keywords || "");
+        } else if (keywords) {
+            const newMetaKeywords = document.createElement("meta");
+            newMetaKeywords.setAttribute("name", "keywords");
+            newMetaKeywords.setAttribute("content", keywords);
+            document.head.appendChild(newMetaKeywords);
         }
 
         // Update Canonical Link
@@ -39,26 +59,45 @@ const SEO = ({ title, description, keywords, schema, breadcrumbs, canonical, typ
             document.head.appendChild(linkCanonical);
         }
 
-        // Schema handling
+        // Schema handling logic
         const existingScripts = document.querySelectorAll('script[type="application/ld+json"].dynamic-schema');
         existingScripts.forEach(script => script.remove());
-
         const schemas = Array.isArray(schema) ? [...schema] : (schema ? [schema] : []);
 
-        // Add MedicalWebPage Authority Wrapper
+        // Image Search Dominance (Rare Signal)
+        const imageSchema = {
+            "@context": "https://schema.org",
+            "@type": "ImageObject",
+            "@id": `${canonicalUrl}#primaryimage`,
+            "url": primaryImage,
+            "contentUrl": primaryImage,
+            "caption": title,
+            "representativeOfPage": "true",
+            "locationCreated": {
+                "@type": "Place",
+                "name": "Jubilee Hills, Hyderabad",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 17.435171,
+                    "longitude": 78.411557
+                }
+            }
+        };
+
         const pageSchema = {
             "@context": "https://schema.org",
             "@type": type,
             "name": title,
             "description": description,
             "url": canonicalUrl,
+            "primaryImageOfPage": { "@id": `${canonicalUrl}#primaryimage` },
             "lastReviewed": new Date().toISOString().split('T')[0],
             "reviewedBy": {
                 "@id": "https://nirvanapainclinic.com/#doctor"
             },
             "medicalSpecialty": "Interventional Pain Management"
         };
-        schemas.push(pageSchema);
+        schemas.push(imageSchema, pageSchema);
 
         // Add Breadcrumb Schema
         if (breadcrumbs) {

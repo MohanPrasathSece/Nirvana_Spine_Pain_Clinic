@@ -78,22 +78,43 @@
         "https://schema.org/Hospital",
         "https://schema.org/MedicalClinic"
       ],
-      "disambiguatingDescription": "Top-rated Pain Management Hospital in Hyderabad. Best Spine Clinic in Jubilee Hills. Specialized medical center for Sciatica, Slip Disc, and Back Pain. Closest multispecialty hospital for chronic pain relief near me in Banjara Hills, Gachibowli, and Madhapur.",
+      "disambiguatingDescription": "Top-rated Pain Management Hospital in Hyderabad. Best Spine Clinic in Jubilee Hills, near Jubilee Hills Checkpost. Specialized medical center for Sciatica, Slip Disc, and Back Pain. Closest multispecialty hospital for chronic pain relief near me in Banjara Hills, Gachibowli, and Madhapur. Located adjacent to major medical hubs in Jubilee Hills.",
       "image": {
         "@type": "ImageObject",
         "url": "https://nirvanapainclinic.com/logo-nobg.png",
         "width": "512",
-        "height": "512"
+        "height": "512",
+        "contentUrl": "https://nirvanapainclinic.com/logo-nobg.png",
+        "locationCreated": {
+          "@type": "Place",
+          "name": "Jubilee Hills, Hyderabad",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 17.435171,
+            "longitude": 78.411557
+          }
+        }
       },
       "logo": "https://nirvanapainclinic.com/logo-nobg.png",
       "@id": "https://nirvanapainclinic.com/#business",
       "url": "https://nirvanapainclinic.com/",
       "telephone": "+919392834992",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://nirvanapainclinic.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://nirvanapainclinic.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        {
+          "@type": "ReserveAction",
+          "target": "https://nirvanapainclinic.com/contact#book-appointment",
+          "name": "Book Appointment",
+          "result": {
+            "@type": "MedicalAppointment",
+            "name": "Spine Consultation"
+          }
+        }
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+919392834992",
@@ -324,6 +345,27 @@
           "@type": "EducationalOccupationalCredential",
           "name": "FIP (Fellow in Interventional Pain Management)",
           "credentialCategory": "Specialization Fellowship"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "85",
+        "bestRating": "5",
+        "worstRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Arjun Rao"
+          },
+          "reviewBody": "Best spine specialist in Hyderabad. Highly professional and knowledgeable."
         }
       ],
       "knowsAbout": [

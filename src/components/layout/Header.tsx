@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,6 +25,32 @@ const navigation = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    // Site Navigation Element Schema (RARE)
+    const navSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Site Navigation",
+      "itemListElement": navigation.map((item, index) => ({
+        "@type": "SiteNavigationElement",
+        "position": index + 1,
+        "name": item.name,
+        "url": `https://nirvanapainclinic.com${item.href}`
+      }))
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.className = "dynamic-nav-schema";
+    script.text = JSON.stringify(navSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existing = document.querySelector(".dynamic-nav-schema");
+      if (existing) existing.remove();
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">

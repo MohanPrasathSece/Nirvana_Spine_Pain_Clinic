@@ -56,12 +56,22 @@ const Gallery = () => {
         "@type": "ImageGallery",
         "name": "Nirvana Spine & Pain Clinic Facilities",
         "description": "State-of-the-art facilities for interventional pain management in Hyderabad.",
-        "image": galleryImages.map(img => ({
+        "image": galleryImages.map((img, index) => ({
             "@type": "ImageObject",
             "contentUrl": `https://nirvanapainclinic.com${img.src}`,
             "name": img.title,
             "description": img.description,
-            "caption": img.alt
+            "caption": img.alt,
+            "representativeOfPage": index === 0 ? "true" : "false",
+            "locationCreated": {
+                "@type": "Place",
+                "name": "Nirvana Spine & Pain Clinic, Jubilee Hills",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 17.435171,
+                    "longitude": 78.411557
+                }
+            }
         }))
     };
 

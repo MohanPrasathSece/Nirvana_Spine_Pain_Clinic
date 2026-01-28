@@ -45,6 +45,36 @@ const About = () => {
         description="Learn about Dr Vamshi Bharadwaj, a leading spine and pain management specialist in Hyderabad. Focused on interventional pain techniques for chronic relief."
         keywords="Dr Vamshi Bharadwaj, Spine Specialist Hyderabad, Pain Management Expert Hyderabad, Nirvana Spine Clinic Founders"
         type="AboutPage"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Physician",
+          "name": "Dr Vamshi Bharadwaj",
+          "url": "https://nirvanapainclinic.com/about",
+          "image": "https://nirvanapainclinic.com/image/vamshiimage.png",
+          "medicalSpecialty": "Interventional Pain Management",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "NTR University of Health Sciences",
+            "sameAs": "http://www.wikidata.org/entity/Q6952877"
+          },
+          "credential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "MBBS",
+              "credentialCategory": "Medical Degree"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "DNB (Orthopaedic Surgery)",
+              "credentialCategory": "Post Graduate Degree"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "FIP (Fellow in Interventional Pain Management)",
+              "credentialCategory": "Specialization Fellowship"
+            }
+          ]
+        }}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "About", item: "/about" }

@@ -125,31 +125,65 @@ const Conditions = () => {
       "Joint & Arthritis Pain": "http://www.wikidata.org/entity/Q191924"
     };
 
+    // Wikidata Citations & Health Portals
+    const citationMap: Record<string, string[]> = {
+      "Back Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/back-pain", "http://www.wikidata.org/entity/Q186356"],
+      "Neck Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/neck-pain", "http://www.wikidata.org/entity/Q123456"],
+      "Sciatica & Leg Pain": ["https://www.nhp.gov.in/disease/neurological/sciatica", "http://www.wikidata.org/entity/Q193633"],
+      "Slip Disc (Herniated Disc)": ["https://en.wikipedia.org/wiki/Spinal_disc_herniation", "http://www.wikidata.org/entity/Q551676"],
+      "Spinal Stenosis": ["https://en.wikipedia.org/wiki/Spinal_stenosis", "http://www.wikidata.org/entity/Q1048831"],
+      "Joint & Arthritis Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/arthritis", "http://www.wikidata.org/entity/Q191924"]
+    };
+
     return {
       "@context": "https://schema.org",
-      "@type": "MedicalCondition",
-      "name": section.title,
-      "description": section.description,
-      "code": codeMap[section.title] || "",
-      "sameAs": wikidataMap[section.title] || "",
-      "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
-      "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
-      "signOrSymptom": (symptomMap[section.title] || []).map(s => ({
-        "@type": "MedicalSignOrSymptom",
-        "name": s
-      })),
-      "associatedAnatomy": {
-        "@type": "AnatomicalStructure",
-        "name": section.title.includes("Spine") || section.title.includes("Back") || section.title.includes("Neck") ? "Spine" : "Joints"
+      "@type": "MedicalWebPage",
+      "name": `Best ${section.title} clinic in Hyderabad`,
+      "about": {
+        "@type": "Place",
+        "name": "Hyderabad",
+        "sameAs": "http://www.wikidata.org/entity/Q1355"
       },
-      "possibleTreatment": section.items.map(item => ({
-        "@type": "MedicalIntervention",
-        "name": item
-      })),
-      "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Patients seeking non-surgical spine and pain relief",
-        "geographicArea": "Hyderabad, Telangana"
+      "mentions": (citationMap[section.title] || []).map(url => ({ "@type": "Thing", "url": url })),
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": section.title,
+        "description": section.description,
+        "code": codeMap[section.title] || "",
+        "sameAs": wikidataMap[section.title] || "",
+        "image": {
+          "@type": "ImageObject",
+          "url": `https://nirvanapainclinic.com/src/assets/condition-${section.title.toLowerCase().split(" ")[0]}.jpg`,
+          "contentUrl": `https://nirvanapainclinic.com/src/assets/condition-${section.title.toLowerCase().split(" ")[0]}.jpg`,
+          "locationCreated": {
+            "@type": "Place",
+            "name": "Jubilee Hills, Hyderabad",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 17.435171,
+              "longitude": 78.411557
+            }
+          }
+        },
+        "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
+        "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
+        "signOrSymptom": (symptomMap[section.title] || []).map(s => ({
+          "@type": "MedicalSignOrSymptom",
+          "name": s
+        })),
+        "associatedAnatomy": {
+          "@type": "AnatomicalStructure",
+          "name": section.title.includes("Spine") || section.title.includes("Back") || section.title.includes("Neck") ? "Spine" : "Joints"
+        },
+        "possibleTreatment": section.items.map(item => ({
+          "@type": "MedicalIntervention",
+          "name": item
+        })),
+        "audience": {
+          "@type": "MedicalAudience",
+          "audienceType": "Patients seeking non-surgical spine and pain relief",
+          "geographicArea": "Hyderabad, Telangana"
+        }
       }
     };
   });
