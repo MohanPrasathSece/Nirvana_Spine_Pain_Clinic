@@ -107,6 +107,11 @@ const Treatment = () => {
       "relevantSpecialty": {
         "@type": "MedicalSpecialty",
         "name": "Pain Management"
+      },
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "People suffering from chronic back, neck, or joint pain",
+        "geographicArea": "Hyderabad, Telangana"
       }
     };
   });

@@ -118,7 +118,12 @@ const Conditions = () => {
       "possibleTreatment": section.items.map(item => ({
         "@type": "MedicalIntervention",
         "name": item
-      }))
+      })),
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patients seeking non-surgical spine and pain relief",
+        "geographicArea": "Hyderabad, Telangana"
+      }
     };
   });
 

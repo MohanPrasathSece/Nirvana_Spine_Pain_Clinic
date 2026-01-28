@@ -191,12 +191,46 @@
       "medicalSpecialty": [
         "PainManagement",
         "Rheumatologic",
-        "Neurological"
+        "Neurological",
+        "SportsMedicine"
+      ],
+      "award": "95% Success Rate in Non-Surgical Spine Treatment",
+      "foundingDate": "2021",
+      "isAccessibleForFree": false,
+      "member": {
+        "@id": "https://nirvanapainclinic.com/#doctor"
+      }
+    }
+  </script>
+
+  <!-- Clinical Results Dataset Schema (RARE) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Nirvana Spine & Pain Clinic Patient Outcome Data",
+      "description": "Clinical success rates and patient volume data for non-surgical interventional pain management in Hyderabad.",
+      "creator": {
+        "@id": "https://nirvanapainclinic.com/#business"
+      },
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "Success Rate",
+          "value": "95",
+          "unitCode": "P1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Patients Treated",
+          "value": "1000",
+          "unitCode": "C62"
+        }
       ]
     }
   </script>
 
-  <!-- Structured Data for Doctor -->
+  <!-- Structured Data for Doctor (Hyper-Enhanced) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -224,7 +258,27 @@
         "addressCountry": "IN"
       },
       "telephone": "+919392834992",
-      "knowsAbout": ["Sciatica", "Slip Disc", "Back Pain", "Neck Pain", "Radiofrequency Ablation", "Epidural Steroid Injection"]
+      "knowsAbout": [
+        "Sciatica", "Slip Disc", "Herniated Nucleus Pulposus", "Lumbar Radiculopathy", "Cervical Spondylosis",
+        "Chronic Back Pain", "Degenerative Disc Disease", "Spinal Stenosis", "Facet Joint Arthropathy",
+        "Sacroiliac Joint Dysfunction", "Neuropathic Pain", "Complex Regional Pain Syndrome (CRPS)",
+        "Post-Laminectomy Syndrome", "Failed Back Surgery Syndrome", "Trigeminal Neuralgia",
+        "Occipital Neuralgia", "Cancer Pain Management", "Myofascial Pain Syndrome", "Fibromyalgia",
+        "Osteoarthritis", "Rheumatoid Arthritis Pain", "Phantom Limb Pain", "Pelvic Pain",
+        "Radiofrequency Ablation (RFA)", "Epidural Steroid Injection (ESI)", "Selective Nerve Root Block (SNRB)",
+        "Facet Joint Injections", "Medial Branch Block", "Lumbar Sympathetic Block", "Stellate Ganglion Block",
+        "Celiac Plexus Block", "Trigger Point Injections", "Platelet-Rich Plasma (PRP) Therapy",
+        "Stem Cell Therapy", "Spinal Cord Stimulation (SCS)", "Intrathecal Pump Therapy",
+        "Interventional Pain Management", "Minimally Invasive Spine Procedures", "Neuromodulation",
+        "Pulsed Radiofrequency", "Discography", "Vertebroplasty", "Kyphoplasty", "Ozone Therapy",
+        "Cryoablation", "Botulinum Toxin Injections for Pain", "Musculoskeletal Ultrasound",
+        "Fluoroscopy-Guided Injections", "Pain Psychology", "Alternative Pain Relief"
+      ],
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patients with chronic spine and joint pain",
+        "geographicArea": "Hyderabad, Telangana, India"
+      }
     }
   </script>
 
