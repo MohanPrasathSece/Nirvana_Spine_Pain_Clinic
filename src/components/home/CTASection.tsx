@@ -11,7 +11,7 @@ const CTASection = () => {
         </h2>
         <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
           Take the first step towards a pain-free life. Schedule a consultation
-          with Dr. Vamshi today and discover personalized treatment options.
+          with Dr Vamshi Bharadwaj today and discover personalized treatment options.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" asChild className="gap-2">

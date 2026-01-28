@@ -75,7 +75,7 @@ const Privacy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p>
-                Email: info@nirvanaspine.com<br />
+                Email: nirvanapainclinic@gmail.com<br />
                 Phone: +91 90000 04992<br />
                 Address: 123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
               </p>

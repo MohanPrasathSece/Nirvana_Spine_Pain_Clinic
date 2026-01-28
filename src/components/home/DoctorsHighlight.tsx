@@ -13,7 +13,7 @@ const DoctorsHighlight = () => {
             <div className="relative max-w-sm">
               <img
                 src={doctorPortrait}
-                alt="Dr. Vamshi - Spine Specialist"
+                alt="Dr Vamshi Bharadwaj - Spine Specialist"
                 className="rounded-2xl shadow-lg w-full h-auto object-cover"
               />
               <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg md:-right-8">
@@ -27,13 +27,13 @@ const DoctorsHighlight = () => {
           <div className="order-2 lg:order-1">
             <p className="text-primary font-medium mb-2">Meet Your Specialist</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Dr. Vamshi
+              Dr Vamshi Bharadwaj
             </h2>
             <p className="text-xl text-muted-foreground mb-2">
               Spine & Pain Management Specialist
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Dr. Vamshi is a renowned spine specialist in Hyderabad with 3
+              Dr Vamshi Bharadwaj is a renowned spine specialist in Hyderabad with 3
               years of experience in treating complex spine conditions and
               chronic pain. He combines advanced interventional techniques with
               a patient-centered approach to deliver lasting relief.
@@ -77,7 +77,7 @@ const DoctorsHighlight = () => {
 
             <Button asChild className="gap-2">
               <Link to="/contact#book-appointment">
-                Book Appointment with Dr. Vamshi
+                Book Appointment with Dr Vamshi Bharadwaj
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>

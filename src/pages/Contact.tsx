@@ -22,16 +22,16 @@ import { toast } from "sonner";
 
 const faqs = [
   {
-    question: "What conditions does Dr. Vamshi treat?",
-    answer: "Dr. Vamshi specializes in treating chronic back pain, neck pain, sciatica, herniated discs, spinal stenosis, degenerative disc disease, and other spine-related conditions. He also treats joint pain and various chronic pain conditions.",
+    question: "What conditions does Dr Vamshi Bharadwaj treat?",
+    answer: "Dr Vamshi Bharadwaj specializes in treating chronic back pain, neck pain, sciatica, herniated discs, spinal stenosis, degenerative disc disease, and other spine-related conditions. He also treats joint pain and various chronic pain conditions.",
   },
   {
     question: "What is the first consultation like?",
-    answer: "During your first visit, Dr. Vamshi will review your medical history, perform a thorough physical examination, and may order diagnostic tests if needed. He will then discuss your diagnosis and recommend a personalized treatment plan.",
+    answer: "During your first visit, Dr Vamshi Bharadwaj will review your medical history, perform a thorough physical examination, and may order diagnostic tests if needed. He will then discuss your diagnosis and recommend a personalized treatment plan.",
   },
   {
     question: "Are the treatments painful?",
-    answer: "Most treatments are minimally invasive and performed under local anesthesia. While you may feel slight pressure during procedures, significant pain is rare. Dr. Vamshi ensures patient comfort is a priority throughout all treatments.",
+    answer: "Most treatments are minimally invasive and performed under local anesthesia. While you may feel slight pressure during procedures, significant pain is rare. Dr Vamshi Bharadwaj ensures patient comfort is a priority throughout all treatments.",
   },
   {
     question: "How long do the treatments take?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: "Do I need a referral to book an appointment?",
-    answer: "No referral is needed. You can directly book an appointment with Dr. Vamshi through our contact form, phone, or by visiting our clinic in Hyderabad.",
+    answer: "No referral is needed. You can directly book an appointment with Dr Vamshi Bharadwaj through our contact form, phone, or by visiting our clinic in Hyderabad.",
   },
   {
     question: "What insurance do you accept?",
@@ -95,7 +95,7 @@ const Contact = () => {
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Ready to take the first step towards a pain-free life? Contact us
-              to schedule a consultation with Dr. Vamshi.
+              to schedule a consultation with Dr Vamshi Bharadwaj.
             </p>
           </div>
         </div>
@@ -147,8 +147,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Email Us</h3>
                       <p className="text-muted-foreground mb-1">Our team is here to help.</p>
-                      <a href="mailto:info@nirvanaspine.com" className="text-primary font-medium hover:underline">
-                        info@nirvanaspine.com
+                      <a href="mailto:nirvanapainclinic@gmail.com" className="text-primary font-medium hover:underline">
+                        nirvanapainclinic@gmail.com
                       </a>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ const Contact = () => {
                     Book Appointment
                   </h2>
                   <p className="text-sm text-muted-foreground">
-                    Schedule a consultation with Dr. Vamshi
+                    Schedule a consultation with Dr Vamshi Bharadwaj
                   </p>
                 </div>
               </div>

@@ -61,18 +61,18 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                Meet Dr. Vamshi
+                Meet Dr Vamshi Bharadwaj
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Dr. Vamshi is a renowned spine and pain management specialist
+                  Dr Vamshi Bharadwaj is a renowned spine and pain management specialist
                   in Hyderabad with 3 years of experience. He has dedicated
                   his career to helping patients find relief from chronic pain
                   through advanced interventional techniques.
                 </p>
                 <p>
                   After completing his medical education and fellowship in pain
-                  management, Dr. Vamshi established Nirvana Spine & Pain Clinic
+                  management, Dr Vamshi Bharadwaj established Nirvana Spine & Pain Clinic
                   to provide world-class care to patients suffering from spine
                   conditions and chronic pain.
                 </p>
@@ -96,7 +96,7 @@ const About = () => {
             <div className="grid grid-cols-1 gap-4">
               <img
                 src={doctorPortrait}
-                alt="Dr. Vamshi - Spine Specialist"
+                alt="Dr Vamshi Bharadwaj - Spine Specialist"
                 className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
               />
             </div>
@@ -267,7 +267,7 @@ const About = () => {
               Ready to Start Your Journey to Pain-Free Living?
             </h2>
             <p className="text-lg mb-8 text-primary-foreground/90">
-              Schedule a consultation with Dr. Vamshi and take the first step towards lasting relief.
+              Schedule a consultation with Dr Vamshi Bharadwaj and take the first step towards lasting relief.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary" className="rounded-full px-8">

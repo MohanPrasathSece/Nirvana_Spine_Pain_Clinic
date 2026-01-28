@@ -5,7 +5,7 @@ const features = [
   {
     icon: Shield,
     title: "Expert Specialist",
-    description: "Dr. Vamshi brings 3 years of specialized experience in spine and pain management.",
+    description: "Dr Vamshi Bharadwaj brings 3 years of specialized experience in spine and pain management.",
   },
   {
     icon: Award,
@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               At Nirvana Spine & Pain Clinic, we combine medical expertise with
-              compassionate care. Dr. Vamshi and his team are dedicated to
+              compassionate care. Dr Vamshi Bharadwaj and his team are dedicated to
               helping you achieve lasting relief from chronic pain.
             </p>
 

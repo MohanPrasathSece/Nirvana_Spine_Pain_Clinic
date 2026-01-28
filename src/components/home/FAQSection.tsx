@@ -12,7 +12,7 @@ const faqs = [
     },
     {
         question: "Do I need a referral to book an appointment?",
-        answer: "No, you don't necessarily need a referral to book an appointment with Dr. Vamshi. You can contact us directly to schedule a consultation.",
+        answer: "No, you don't necessarily need a referral to book an appointment with Dr Vamshi Bharadwaj. You can contact us directly to schedule a consultation.",
     },
     {
         question: "What should I bring to my first appointment?",

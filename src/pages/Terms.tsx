@@ -30,7 +30,7 @@ const Terms = () => {
               <p>
                 The information provided on this website is for general informational
                 purposes only and should not be considered as medical advice. Always
-                consult with Dr. Vamshi or another qualified healthcare provider for
+                consult with Dr Vamshi Bharadwaj or another qualified healthcare provider for
                 proper diagnosis and treatment.
               </p>
 
@@ -91,7 +91,7 @@ const Terms = () => {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <p>
-                Email: info@nirvanaspine.com<br />
+                Email: nirvanapainclinic@gmail.com<br />
                 Phone: +91 90000 04992<br />
                 Address: 123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
               </p>
