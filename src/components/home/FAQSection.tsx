@@ -29,8 +29,24 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
     return (
         <section className="section-padding bg-secondary/50">
+            <script type="application/ld+json" className="dynamic-schema">
+                {JSON.stringify(faqSchema)}
+            </script>
             <div className="container-medical">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">

@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import { Shield, Target, Eye, Heart, Award, GraduationCap } from "lucide-react";
 const doctorPortrait = "/image/vamshiimage.png";
 import clinicInterior from "@/assets/clinic.jpg";
@@ -39,6 +40,11 @@ const stats = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About Dr Vamshi Bharadwaj | Best Spine Specialist in Hyderabad"
+        description="Learn about Dr Vamshi Bharadwaj, a leading spine and pain management specialist in Hyderabad. Focused on interventional pain techniques for chronic relief."
+        keywords="Dr Vamshi Bharadwaj, Spine Specialist Hyderabad, Pain Management Expert Hyderabad, Nirvana Spine Clinic Founders"
+      />
       {/* Hero */}
       <section className="bg-secondary section-padding">
         <div className="container-medical">

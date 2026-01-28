@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 import spineTreatImg from "@/assets/treatment-spine-care.jpg";
 import jointTreatImg from "@/assets/treatment-injection.jpg";
@@ -84,8 +85,25 @@ const treatmentSections = [
 ];
 
 const Treatment = () => {
+  const treatmentSchema = treatmentSections.map(section => ({
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": section.title,
+    "description": section.description,
+    "procedureType": {
+      "@type": "MedicalSpecialty",
+      "name": "Interventional Pain Management"
+    }
+  }));
+
   return (
     <Layout>
+      <SEO 
+        title="Non-Surgical Spine Care & Pain Procedures in Hyderabad | Nirvana Spine"
+        description="Advanced non-surgical procedures for spine and joint pain in Hyderabad. Minimally invasive treatments including RFA, Nerve Blocks, and Epidural Injections."
+        keywords="Pain Management Procedures Hyderabad, Non-Surgical Spine Treatment, RF Ablation Hyderabad, Nerve Block Treatment"
+        schema={treatmentSchema}
+      />
       {/* Hero */}
       <section className="bg-secondary section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

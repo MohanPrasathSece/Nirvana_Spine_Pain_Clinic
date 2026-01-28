@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import spineImg from "@/assets/spine-care.jpg";
 import jointImg from "@/assets/condition-knee-pain.jpg";
 import nerveImg from "@/assets/condition-sciatica.jpg";
@@ -93,8 +94,29 @@ const conditionSections = [
 ];
 
 const Conditions = () => {
+  const medicalSchema = conditionSections.map(section => ({
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": section.title,
+    "description": section.description,
+    "associatedAnatomy": {
+      "@type": "AnatomicalStructure",
+      "name": section.title.includes("Spine") ? "Spine" : "Joints"
+    },
+    "possibleTreatment": section.items.map(item => ({
+      "@type": "MedicalIntervention",
+      "name": item
+    }))
+  }));
+
   return (
     <Layout>
+      <SEO
+        title="Sciatica, Slip Disc & Back Pain Treatment in Hyderabad | Nirvana Spine"
+        description="Providing expert treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced non-surgical pain management for lasting relief."
+        keywords="Sciatica Treatment Hyderabad, Slip Disc Treatment Hyderabad, Back Pain Relief, Neck Pain Specialists Hyderabad"
+        schema={medicalSchema}
+      />
       {/* Hero */}
       <section className="bg-secondary section-padding relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

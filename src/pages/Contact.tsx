@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/accordion";
 import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { toast } from "sonner";
+import SEO from "@/components/SEO";
 
 const faqs = [
   {
@@ -48,6 +49,19 @@ const faqs = [
 ];
 
 const Contact = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -85,6 +99,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us | Book Appointment at Best Pain Clinic in Hyderabad"
+        description="Book your consultation with Dr Vamshi Bharadwaj at Nirvana Spine & Pain Clinic, the leading pain management center in Hyderabad. Visit us for expert spine care."
+        keywords="Book Appointment Pain Clinic Hyderabad, Contact Spine Specialist Hyderabad, Dr Vamshi Bharadwaj Contact"
+        schema={faqSchema}
+      />
       {/* Hero */}
       <section className="bg-secondary section-padding">
         <div className="container-medical">

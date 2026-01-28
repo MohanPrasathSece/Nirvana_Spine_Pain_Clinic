@@ -3,47 +3,48 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const galleryImages = [
     {
         src: "/image/procedure-1.jpg",
-        alt: "Spine Procedure 1",
+        alt: "Advanced Spine Diagnostics in Hyderabad",
         title: "Advanced Diagnostics",
         description: "State-of-the-art diagnostic imaging for accurate spine assessment."
     },
     {
         src: "/image/procedure-2.jpg",
-        alt: "Spine Procedure 2",
-        title: "Minimally Invasive Surgery",
-        description: "Scope-based procedures ensuring faster recovery and minimal scarring."
+        alt: "Non-Surgical Slip Disc Treatment Hyderabad",
+        title: "Minimally Invasive Procedures",
+        description: "Interventional procedures ensuring faster recovery and minimal soreness."
     },
     {
         src: "/image/procedure-3.jpg",
-        alt: "Spine Procedure 3",
+        alt: "Sciatica Treatment Injection Hyderabad",
         title: "Pain Management Injection",
         description: "Targeted injections to relieve chronic pain and inflammation."
     },
     {
         src: "/image/procedure-4.jpg",
-        alt: "Spine Procedure 4",
+        alt: "Physical Rehabilitation for Spine Pain Hyderabad",
         title: "Physical Rehabilitation",
         description: "Guided exercises to restore strength and flexibility."
     },
     {
         src: "/image/procedure-5.jpg",
-        alt: "Spine Procedure 5",
+        alt: "Consultation with Best Spine Specialist in Hyderabad",
         title: "Consultation & Care",
         description: "Personalized consultation with our spine specialists."
     },
     {
         src: "/image/procedure-6.jpg",
-        alt: "Spine Procedure 6",
-        title: "Surgical Suite",
-        description: "Modern surgical facilities equipped with latest technology."
+        alt: "Modern Pain Clinic Facility Hyderabad",
+        title: "Procedure Suite",
+        description: "Modern facilities equipped with latest interventional technology."
     },
     {
         src: "/image/procedure-7.jpg",
-        alt: "Spine Procedure 7",
+        alt: "Recovery Care at Nirvana Spine Clinic Hyderabad",
         title: "Recovery & Monitoring",
         description: "Post-procedure care ensuring patient comfort and safety."
     }
@@ -52,16 +53,21 @@ const galleryImages = [
 const Gallery = () => {
     return (
         <Layout>
+            <SEO
+                title="Clinic Gallery | Top Facilities & Procedures in Hyderabad | Nirvana Spine"
+                description="View our state-of-the-art pain clinic facilities and advanced interventional procedure rooms in Hyderabad. See how we treat spine conditions."
+                keywords="Pain Clinic Gallery Hyderabad, Spine Treatment Photos, Nirvana Spine Clinic Facilities"
+            />
             {/* Hero */}
             <section className="bg-secondary section-padding">
                 <div className="container-medical">
                     <div className="max-w-3xl mx-auto text-center">
                         <p className="text-primary font-medium mb-2">Our Facilities & Procedures</p>
                         <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-                            Gallery
+                            Clinic Gallery & Facilities in Hyderabad
                         </h1>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            Explore our state-of-the-art facilities and get a glimpse of the advanced procedures we perform to ensure your spinal health.
+                            Explore our state-of-the-art facilities and get a glimpse of the advanced procedures we perform to ensure your spinal health at the best pain clinic in Hyderabad.
                         </p>
                     </div>
                 </div>
