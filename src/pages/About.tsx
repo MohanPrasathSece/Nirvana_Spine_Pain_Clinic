@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Target, Eye, Heart, Award, GraduationCap } from "lucide-react";
 const doctorPortrait = "/image/vamshiimage.png";
 import clinicInterior from "@/assets/clinic.jpg";
+import Counter from "@/components/ui/counter";
 
 const values = [
   {
@@ -29,10 +30,10 @@ const values = [
 ];
 
 const stats = [
-  { value: "3", label: "Years of Experience" },
-  { value: "1K+", label: "Patients Treated" },
-  { value: "95%", label: "Success Rate" },
-  { value: "1", label: "Dedicated Specialist" },
+  { value: 3, label: "Years of Experience", suffix: "" },
+  { value: 1000, label: "Patients Treated", suffix: "+" },
+  { value: 95, label: "Success Rate", suffix: "%" },
+  { value: 1, label: "Dedicated Specialist", suffix: "" },
 ];
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2">About Us</p>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Your Trusted Spine & Pain Specialists in Hyderabad
+              Best Pain Clinic in Hyderabad | Expert Spine Specialists
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Nirvana Spine & Pain Clinic is dedicated to helping patients
@@ -145,7 +146,7 @@ const About = () => {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-2">
-                  {stat.value}
+                  <Counter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-primary-foreground/70">{stat.label}</p>
               </div>

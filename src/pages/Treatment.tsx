@@ -96,7 +96,7 @@ const Treatment = () => {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Our Procedures</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6">
-              Treatments & Procedures
+              Non-Surgical Spine Care & Pain Procedures in Hyderabad
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We offer a comprehensive range of advanced, minimally invasive interventional procedures designed to target pain at its source and promote fast recovery.
