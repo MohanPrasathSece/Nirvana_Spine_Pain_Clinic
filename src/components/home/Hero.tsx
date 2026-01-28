@@ -7,7 +7,11 @@ import Counter from "@/components/ui/counter";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden" itemScope itemType="https://schema.org/MedicalOrganization">
+      <meta itemProp="name" content="Nirvana Spine & Pain Clinic" />
+      <meta itemProp="description" content="Top rated spine clinic in Hyderabad offering advanced pain management by Dr Vamshi Bharadwaj." />
+      <meta itemProp="address" content="Jubilee Hills, Hyderabad" />
+      <meta itemProp="telephone" content="+91 93928 34992" />
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

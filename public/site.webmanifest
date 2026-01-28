@@ -1,20 +1,30 @@
 {
-    "name": "Nirvana Spine & Pain Clinic",
-    "short_name": "Nirvana Clinic",
+    "name": "Nirvana Spine & Pain Clinic | Best Pain Clinic in Hyderabad",
+    "short_name": "Nirvana Pain Clinic",
+    "description": "Nirvana Spine & Pain Clinic is the leading pain management center in Hyderabad, specialized in non-surgical treatments for back pain, neck pain, sciatica, and slip disc by Dr Vamshi Bharadwaj.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "theme_color": "#0f172a",
+    "orientation": "portrait",
+    "scope": "/",
     "icons": [
         {
             "src": "/favicon.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "/favicon.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
-    ]
+    ],
+    "categories": [
+        "medical",
+        "health"
+    ],
+    "lang": "en-IN"
 }

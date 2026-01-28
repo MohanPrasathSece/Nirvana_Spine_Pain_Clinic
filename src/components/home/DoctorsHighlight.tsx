@@ -24,11 +24,13 @@ const DoctorsHighlight = () => {
           </div>
 
           {/* Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1" itemScope itemType="https://schema.org/Physician">
             <p className="text-primary font-medium mb-2">Meet Your Specialist</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4" itemProp="name">
               Dr Vamshi Bharadwaj
             </h2>
+            <meta itemProp="medicalSpecialty" content="Pain Management Specialist" />
+            <meta itemProp="address" content="Jubilee Hills, Hyderabad" />
             <p className="text-xl text-muted-foreground mb-2">
               Spine & Pain Management Specialist
             </p>
