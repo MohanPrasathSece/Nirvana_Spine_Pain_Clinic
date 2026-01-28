@@ -17,7 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Youtube } from "lucide-react";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
@@ -201,13 +201,27 @@ const Contact = () => {
               <div className="pt-6 border-t border-border/50">
                 <p className="font-medium mb-4 text-foreground/80">Follow us on social media</p>
                 <div className="flex gap-4">
-                  {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+                  {[
+                    { Icon: Facebook, href: "#", label: "Facebook" },
+                    { Icon: Instagram, href: "#", label: "Instagram" },
+                    {
+                      Icon: () => (
+                        <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
+                          <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298l13.312 17.404z" />
+                        </svg>
+                      ),
+                      href: "#",
+                      label: "X (Twitter)"
+                    },
+                    { Icon: Youtube, href: "#", label: "Youtube" }
+                  ].map((social, i) => (
                     <a
                       key={i}
-                      href="#"
+                      href={social.href}
+                      aria-label={social.label}
                       className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
-                      <Icon className="w-5 h-5" />
+                      <social.Icon className="w-5 h-5" />
                     </a>
                   ))}
                 </div>

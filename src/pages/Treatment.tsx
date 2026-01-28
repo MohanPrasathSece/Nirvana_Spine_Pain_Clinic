@@ -7,9 +7,10 @@ import SEO from "@/components/SEO";
 import spineTreatImg from "@/assets/treatment-spine-care.jpg";
 import jointTreatImg from "@/assets/treatment-injection.jpg";
 import nerveTreatImg from "@/assets/treatment-nerve-block.jpg";
-import headTreatImg from "@/assets/therapy.jpg";
+import therapyImg from "@/assets/therapy.jpg";
 import cancerTreatImg from "@/assets/surgery.jpg";
 import advancedTreatImg from "@/assets/diagnostic.jpg";
+import headacheImg from "@/assets/headache.png";
 
 const treatmentSections = [
   {
@@ -27,7 +28,7 @@ const treatmentSections = [
   },
   {
     title: "Joint Pain Treatments",
-    image: jointTreatImg,
+    image: therapyImg,
     description: "Precise, image-guided injections to reduce inflammation and restore mobility in both major and minor joints throughout the body.",
     items: [
       "Knee Joint Injection",
@@ -51,7 +52,7 @@ const treatmentSections = [
   },
   {
     title: "Headache & Facial Pain Treatments",
-    image: headTreatImg,
+    image: headacheImg,
     description: "Advanced interventional procedures provide long-term relief from chronic migraines and complex facial neuralgia conditions.",
     items: [
       "Migraine Injections",

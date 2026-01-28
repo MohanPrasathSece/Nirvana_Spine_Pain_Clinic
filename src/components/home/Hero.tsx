@@ -18,7 +18,8 @@ const Hero = () => {
           src={heroImage}
           alt="Spine specialist treating patient"
           className="w-full h-full object-cover"
-          fetchPriority="high"
+          // @ts-ignore
+          fetchpriority="high"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
@@ -27,13 +28,12 @@ const Hero = () => {
       {/* Content */}
       <div className="relative container-medical py-24 md:py-32 lg:py-40">
         <div className="max-w-2xl">
-          <p className="text-xl md:text-2xl font-bold text-primary mb-6 animate-fade-in tracking-tight">
-            Welcome to Nirvana Spine & Pain Clinic
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            Expert Spine Care.{" "}
-            <span className="text-primary">Pain-Free Living.</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight mb-6 animate-fade-in">
+            Welcome to <span className="text-primary">Nirvana</span> Spine & Pain Clinic
           </h1>
+          <p className="text-xl md:text-2xl font-bold text-muted-foreground mb-8 animate-fade-in tracking-tight" style={{ animationDelay: "0.1s" }}>
+            Expert Spine Care. Pain-Free Living.
+          </p>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Experience relief from chronic pain with Dr Vamshi Bharadwaj's specialized
             treatment. Advanced techniques for back pain, neck pain, and

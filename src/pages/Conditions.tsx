@@ -7,9 +7,10 @@ import spineImg from "@/assets/spine-care.jpg";
 import jointImg from "@/assets/condition-knee-pain.jpg";
 import nerveImg from "@/assets/condition-sciatica.jpg";
 import chronicImg from "@/assets/condition-back-pain.jpg";
-import headImg from "@/assets/condition-neck-pain.jpg";
+import neckImg from "@/assets/condition-neck-pain.jpg";
 import cancerImg from "@/assets/medical-team.jpg";
 import specializedImg from "@/assets/condition-slip-disc.jpg";
+import facialPainImg from "@/assets/facial pain.png";
 
 const conditionSections = [
   {
@@ -60,7 +61,7 @@ const conditionSections = [
   },
   {
     title: "Head & Facial Pain",
-    image: headImg,
+    image: facialPainImg,
     description: "Debilitating conditions including chronic migraines and neuralgia that significantly impact daily functioning.",
     items: [
       "Migraine",
