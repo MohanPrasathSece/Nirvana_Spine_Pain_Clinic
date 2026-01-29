@@ -202,8 +202,8 @@ const Contact = () => {
                 <p className="font-medium mb-4 text-foreground/80">Follow us on social media</p>
                 <div className="flex gap-4">
                   {[
-                    { Icon: Facebook, href: "#", label: "Facebook" },
-                    { Icon: Instagram, href: "#", label: "Instagram" },
+                    { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61586868845417", label: "Facebook" },
+                    { Icon: Instagram, href: "https://www.instagram.com/nirvanapainclinic/", label: "Instagram" },
                     {
                       Icon: () => (
                         <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
@@ -218,6 +218,8 @@ const Contact = () => {
                     <a
                       key={i}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={social.label}
                       className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     >

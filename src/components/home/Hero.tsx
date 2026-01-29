@@ -12,6 +12,8 @@ const Hero = () => {
       <meta itemProp="description" content="Top rated spine clinic in Hyderabad offering advanced pain management by Dr Vamshi Bharadwaj." />
       <meta itemProp="address" content="Jubilee Hills, Hyderabad" />
       <meta itemProp="telephone" content="+91 93928 34992" />
+      <link itemProp="sameAs" href="https://www.facebook.com/profile.php?id=61586868845417" />
+      <link itemProp="sameAs" href="https://www.instagram.com/nirvanapainclinic/" />
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
