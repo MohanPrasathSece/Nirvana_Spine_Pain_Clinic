@@ -124,7 +124,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-primary-foreground/70">
-                  123 Healthcare Avenue, Jubilee Hills, Hyderabad 500033
+                  4th floor, Radha Spaces, Gooncha Hills Main St, Kokapet, Gandipet, Hyderabad, Telangana 500075
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -156,7 +156,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-primary-foreground/70">
-                  <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                  <p>Mon - Sat: 11:00 AM - 7:00 PM</p>
                   <p>Sunday: By Appointment</p>
                 </div>
               </li>

@@ -148,9 +148,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Visit Us</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        123 Healthcare Avenue, Jubilee Hills,
+                        4th floor, Radha Spaces, Gooncha Hills Main St,
                         <br />
-                        Hyderabad, Telangana 500033
+                        Kokapet, Gandipet, Hyderabad 500075
                       </p>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Call Us</h3>
-                      <p className="text-muted-foreground mb-1">Mon-Sat from 9am to 7pm</p>
+                      <p className="text-muted-foreground mb-1">Mon-Sat from 11am to 7pm</p>
                       <a href="tel:+919392834992" className="text-primary font-medium hover:underline block">
                         +91 93928 34992
                       </a>
@@ -190,7 +190,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-heading font-semibold text-foreground mb-1">Working Hours</h3>
-                      <p className="text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                      <p className="text-muted-foreground">Mon - Sat: 11:00 AM - 7:00 PM</p>
                       <p className="text-muted-foreground">Sunday: By Appointment</p>
                     </div>
                   </div>

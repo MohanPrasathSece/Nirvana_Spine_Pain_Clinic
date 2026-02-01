@@ -41,40 +41,10 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        title="About Dr Vamshi Bharadwaj | Best Spine Specialist in Hyderabad"
-        description="Learn about Dr Vamshi Bharadwaj, a leading spine and pain management specialist in Hyderabad. Focused on interventional pain techniques for chronic relief."
-        keywords="Dr Vamshi Bharadwaj, Spine Specialist Hyderabad, Pain Management Expert Hyderabad, Nirvana Spine Clinic Founders"
+        title="Dr Vamshi Bharadwaj | Best Spine Specialist & Pain Doctor in Hyderabad"
+        description="Meet Dr Vamshi Bharadwaj, the leading spine and pain management specialist at Nirvana Spine & Pain Clinic, Kokapet, Hyderabad. Expert in non-surgical chronic pain relief."
+        keywords="dr vamshi bharadwaj, top spine specialist kokapet, best pain management doctor gandipet, interventional pain specialist hyderabad, orthopaedic spine care kokapet"
         type="AboutPage"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "Physician",
-          "name": "Dr Vamshi Bharadwaj",
-          "url": "https://nirvanapainclinic.com/about",
-          "image": "https://nirvanapainclinic.com/image/vamshiimage.png",
-          "medicalSpecialty": "Interventional Pain Management",
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "NTR University of Health Sciences",
-            "sameAs": "http://www.wikidata.org/entity/Q6952877"
-          },
-          "credential": [
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "MBBS",
-              "credentialCategory": "Medical Degree"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "DNB (Orthopaedic Surgery)",
-              "credentialCategory": "Post Graduate Degree"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "FIP (Fellow in Interventional Pain Management)",
-              "credentialCategory": "Specialization Fellowship"
-            }
-          ]
-        }}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "About", item: "/about" }
@@ -185,12 +155,18 @@ const About = () => {
       <section className="section-padding bg-primary">
         <div className="container-medical">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
+            {stats.map((stat, idx) => (
+              <div key={idx} className="text-center">
                 <p className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-2">
-                  <Counter value={stat.value} suffix={stat.suffix} />
+                  {stat.label === "Years of Experience" ? (
+                    "Years of"
+                  ) : (
+                    <Counter value={stat.value} suffix={stat.suffix} />
+                  )}
                 </p>
-                <p className="text-primary-foreground/70">{stat.label}</p>
+                <p className="text-primary-foreground/70">
+                  {stat.label === "Years of Experience" ? "Experience" : stat.label}
+                </p>
               </div>
             ))}
           </div>

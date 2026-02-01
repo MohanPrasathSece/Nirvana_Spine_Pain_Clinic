@@ -6,18 +6,19 @@ import {
   Stethoscope,
   Brain,
   Bone,
+  Zap,
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Bone,
+    icon: Stethoscope,
     title: "Spine & Nerve Pain",
     description: "Expert care for low back pain, neck pain, slip disc, sciatica, and spondylosis.",
   },
   {
-    icon: Activity,
+    icon: Bone,
     title: "Joint & MSK Pain",
     description: "Advanced relief for knee, shoulder, hip, elbow, wrist pain, and sports injuries.",
   },
@@ -27,7 +28,7 @@ const services = [
     description: "Comprehensive management of neuropathic pain, diabetic neuropathy, and neuralgia.",
   },
   {
-    icon: Stethoscope,
+    icon: Activity,
     title: "Chronic Pain Care",
     description: "Specialized treatment for myofascial pain and failed back surgery syndrome.",
   },
@@ -37,7 +38,7 @@ const services = [
     description: "Effective interventions for migraines, tension headaches, and trigeminal neuralgia.",
   },
   {
-    icon: Activity,
+    icon: Zap,
     title: "Advanced Procedures",
     description: "Minimally invasive RFA, nerve blocks, and image-guided injections.",
   },
@@ -65,16 +66,20 @@ const ServicesOverview = () => {
             <div
               key={service.title}
               className="card-medical p-6 group"
+              itemScope
+              itemType="https://schema.org/Service"
             >
               <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
                 <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-2" itemProp="name">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed" itemProp="description">
                 {service.description}
               </p>
+              <meta itemProp="provider" content="Nirvana Spine & Pain Clinic" />
+              <meta itemProp="areaServed" content="Hyderabad" />
             </div>
           ))}
         </div>

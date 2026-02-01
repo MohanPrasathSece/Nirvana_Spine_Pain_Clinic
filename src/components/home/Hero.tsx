@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="relative overflow-hidden" itemScope itemType="https://schema.org/MedicalOrganization">
       <meta itemProp="name" content="Nirvana Spine & Pain Clinic" />
       <meta itemProp="description" content="Top rated spine clinic in Hyderabad offering advanced pain management by Dr Vamshi Bharadwaj." />
-      <meta itemProp="address" content="Jubilee Hills, Hyderabad" />
+      <meta itemProp="address" content="Kokapet, Hyderabad" />
       <meta itemProp="telephone" content="+91 93928 34992" />
       <link itemProp="sameAs" href="https://www.facebook.com/profile.php?id=61586868845417" />
       <link itemProp="sameAs" href="https://www.instagram.com/nirvanapainclinic/" />
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Spine specialist treating patient"
+          alt="Nirvana Spine & Pain Clinic - Best Pain Management Center in Hyderabad by Dr Vamshi Bharadwaj"
           className="w-full h-full object-cover"
           // @ts-ignore
           fetchpriority="high"
@@ -39,7 +39,7 @@ const Hero = () => {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Experience relief from chronic pain with Dr Vamshi Bharadwaj's specialized
             treatment. Advanced techniques for back pain, neck pain, and
-            spine conditions in Hyderabad.
+            spine conditions in Kokapet, Hyderabad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button size="lg" asChild className="gap-2">
@@ -59,15 +59,17 @@ const Hero = () => {
           {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: 3, label: "Years Experience", suffix: "" },
-              { value: 1000, label: "Patients Treated", suffix: "+" },
-              { value: 95, label: "Success Rate", suffix: "%" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl md:text-4xl font-heading font-bold text-primary">
-                  <Counter value={stat.value} suffix={stat.suffix} />
+              { label: "Treatments", value: "500", suffix: "+" },
+              { label: "Patients", value: "1000", suffix: "+" },
+              { label: "Success Rate", value: "95", suffix: "%" },
+            ].map((stat, idx) => (
+              <div key={idx} className="flex flex-col">
+                <p className="text-sm font-medium text-muted-foreground mb-1">
+                  {stat.label}
                 </p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-heading font-bold text-primary">
+                  <Counter value={parseInt(stat.value)} suffix={stat.suffix} />
+                </p>
               </div>
             ))}
           </div>

@@ -132,8 +132,8 @@ const Treatment = () => {
     <Layout>
       <SEO
         title="Non-Surgical Spine Care & Pain Procedures in Hyderabad | Nirvana Spine"
-        description="Advanced non-surgical procedures for spine and joint pain in Hyderabad. Minimally invasive treatments including RFA, Nerve Blocks, and Epidural Injections."
-        keywords="Pain Management Procedures Hyderabad, Non-Surgical Spine Treatment, RF Ablation Hyderabad, Nerve Block Treatment"
+        description="Top-rated non-surgical spine and joint pain procedures in Hyderabad. We offer minimally invasive treatments including RF Ablation, Nerve Blocks, and Epidural Injections."
+        keywords="pain management hyderabad, non-surgical spine treatment hyderabad, radiofrequency ablation hyderabad, interventional pain management, nerve block treatment hyderabad"
         schema={treatmentSchema}
         breadcrumbs={[
           { name: "Home", item: "/" },

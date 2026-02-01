@@ -193,8 +193,8 @@ const Conditions = () => {
     <Layout>
       <SEO
         title="Sciatica, Slip Disc & Back Pain Treatment in Hyderabad | Nirvana Spine"
-        description="Providing expert treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced non-surgical pain management for lasting relief."
-        keywords="Sciatica Treatment Hyderabad, Slip Disc Treatment Hyderabad, Back Pain Relief, Neck Pain Specialists Hyderabad"
+        description="Comprehensive treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced non-surgical pain management for lasting relief by Dr Vamshi Bharadwaj."
+        keywords="sciatica treatment hyderabad, slip disc treatment hyderabad, back pain relief hyderabad, neck pain specialist hyderabad, spine clinic jubilee hills, best pain clinic hyderabad"
         schema={medicalSchema}
         breadcrumbs={[
           { name: "Home", item: "/" },
