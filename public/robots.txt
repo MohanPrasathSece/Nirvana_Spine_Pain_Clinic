@@ -13,4 +13,5 @@ Allow: /
 User-agent: *
 Allow: /
 
+Host: https://nirvanapainclinic.com
 Sitemap: https://nirvanapainclinic.com/sitemap.xml

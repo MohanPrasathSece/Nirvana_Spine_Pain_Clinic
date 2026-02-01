@@ -9,6 +9,7 @@ interface SEOProps {
     canonical?: string;
     type?: "WebPage" | "MedicalWebPage" | "AboutPage" | "ContactPage";
     primaryImage?: string;
+    noindex?: boolean;
 }
 
 const SEO = ({
@@ -19,7 +20,8 @@ const SEO = ({
     breadcrumbs,
     canonical,
     type = "MedicalWebPage",
-    primaryImage = "https://nirvanapainclinic.com/logo-nobg.png"
+    primaryImage = "https://nirvanapainclinic.com/logo-nobg.png",
+    noindex = false
 }: SEOProps) => {
     useEffect(() => {
         // Update Title
@@ -28,6 +30,9 @@ const SEO = ({
         // Update Meta Description
         updateOrCreateMeta("description", description);
         updateOrCreateMeta("keywords", keywords || "");
+
+        // Robots
+        updateOrCreateMeta("robots", noindex ? "noindex, nofollow" : "index, follow");
 
         // Open Graph tags
         updateOrCreateMeta("og:title", title, "property");

@@ -1,0 +1,12 @@
+/* TEAM */
+  Developer: Zyra Digitals
+  Contact: contact@zyradigitals.com
+  Twitter: @zyradigitals
+  Site: https://www.zyradigitals.com
+  Location: Hyderabad, India
+
+/* SITE */
+  Last update: 2026-01-29
+  Language: English
+  Doctype: HTML5
+  IDE: Visual Studio Code, Antigravity
