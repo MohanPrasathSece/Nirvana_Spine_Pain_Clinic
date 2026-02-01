@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
           <div className="relative">
             <img
               src={clinicInterior}
-              alt="Nirvana Spine & Pain Clinic"
+              alt="Nirvana Spine & Pain Clinic Interior - Best Pain Treatment Facility in Kokapet, Hyderabad"
               className="rounded-2xl shadow-lg w-full"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg hidden md:block">

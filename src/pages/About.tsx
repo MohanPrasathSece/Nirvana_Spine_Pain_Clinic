@@ -42,9 +42,23 @@ const About = () => {
     <Layout>
       <SEO
         title="Dr Vamshi Bharadwaj | Best Spine Specialist & Pain Doctor in Hyderabad"
-        description="Meet Dr Vamshi Bharadwaj, the leading spine and pain management specialist at Nirvana Spine & Pain Clinic, Kokapet, Hyderabad. Expert in non-surgical chronic pain relief."
-        keywords="dr vamshi bharadwaj, top spine specialist kokapet, best pain management doctor gandipet, interventional pain specialist hyderabad, orthopaedic spine care kokapet"
+        description="Meet Dr Vamshi Bharadwaj, the leading spine and pain management specialist in Hyderabad. Expert in non-surgical chronic pain relief at Nirvana Spine & Pain Clinic."
+        keywords="dr vamshi bharadwaj, top spine specialist hyderabad, best pain management doctor hyderabad, interventional pain specialist hyderabad, orthopaedic spine care, pain doctor kokapet, spine surgeon hyderabad"
         type="AboutPage"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Dr. Vamshi Bharadwaj",
+          "jobTitle": "Interventional Pain Management Specialist",
+          "honorificPrefix": "Dr.",
+          "description": "Excellence in non-surgical spine and pain management. Specialized in radiofrequency ablation and epidural injections.",
+          "affiliation": { "@id": "https://nirvanapainclinic.com/#organization" },
+          "hasCredential": [
+            { "@type": "EducationalOccupationalCredential", "name": "MBBS" },
+            { "@type": "EducationalOccupationalCredential", "name": "MD Anesthesiology" },
+            { "@type": "EducationalOccupationalCredential", "name": "Fellowship in Pain Management" }
+          ]
+        }}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "About", item: "/about" }

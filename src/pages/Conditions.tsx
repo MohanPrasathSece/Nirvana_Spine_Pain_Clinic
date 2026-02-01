@@ -96,49 +96,49 @@ const conditionSections = [
 
 const Conditions = () => {
   const medicalSchema = conditionSections.map(section => {
-    // SNOMED-CT / ICD-10 Mappings
+    // God-Tier Clinical Mappings (ICD-11 / SNOMED)
     const codeMap: Record<string, string> = {
-      "Back Pain": "SNOMED-CT: 22253000, ICD-10: M54.5",
-      "Neck Pain": "SNOMED-CT: 71181003, ICD-10: M54.2",
-      "Sciatica & Leg Pain": "SNOMED-CT: 23056005, ICD-10: M54.3",
-      "Slip Disc (Herniated Disc)": "SNOMED-CT: 258321008, ICD-10: M51.2",
-      "Spinal Stenosis": "SNOMED-CT: 14760008, ICD-10: M48.0",
-      "Joint & Arthritis Pain": "SNOMED-CT: 3723001, ICD-10: M19"
+      "Spine & Nerve Pain": "ICD-11: ME84.2, SNOMED-CT: 22253000",
+      "Joint & Musculoskeletal Pain": "ICD-11: FA31.Z, SNOMED-CT: 3723001",
+      "Nerve-Related Pain": "ICD-11: 8B92, SNOMED-CT: 23056005",
+      "Chronic Pain": "ICD-11: MG30.0, SNOMED-CT: 82423001",
+      "Head & Facial Pain": "ICD-11: 8E43.0, SNOMED-CT: 25064002",
+      "Cancer & Palliative Pain": "ICD-11: MG30.1, SNOMED-CT: 404640003",
+      "Specialized Pain Conditions": "ICD-11: 8E49, SNOMED-CT: 400003000"
     };
 
-    // Symptom Mappings (Rare Discovery Keywords)
+    // God-Tier Symptom Clusters for Discovery
     const symptomMap: Record<string, string[]> = {
-      "Back Pain": ["lower back stiffness", "sharp back pain", "muscle spasms", "aching back", "difficulty standing"],
-      "Neck Pain": ["upper back stiffness", "shooting shoulder pain", "neck immobility", "tension headache", "arm weakness"],
-      "Sciatica & Leg Pain": ["leg numbness", "electric shock sensation", "burning leg pain", "calf tingling", "shooting pain in buttocks"],
-      "Slip Disc (Herniated Disc)": ["pinched nerve pain", "sudden sharp pain", "limited range of motion", "disc bulge symptoms"],
-      "Spinal Stenosis": ["leg heaviness while walking", "cramping in legs", "pain that improves while leaning forward"],
-      "Joint & Arthritis Pain": ["swollen joints", "creaking knees", "morning stiffness", "limited joint movement", "hip grinding sensation"]
+      "Spine & Nerve Pain": ["Lumbago", "Spondylosis", "Radiculopathy", "Lower back stiffness", "Disc herniation symptoms"],
+      "Joint & Musculoskeletal Pain": ["Arthralgia", "Osteoarthritis pain", "Joint effusion", "Synovitis"],
+      "Nerve-Related Pain": ["Neuropathic burning", "Paresthesia", "Chronic neuralgia", "Nerve compression"],
+      "Chronic Pain": ["Central sensitization", "Persistent musculoskeletal pain", "Intractable pain"],
+      "Head & Facial Pain": ["Chronic migraine", "Trigeminal neuralgia shocks", "Cervicogenic headache"],
+      "Cancer & Palliative Pain": ["Oncological pain management", "Nociceptive cancer pain"],
+      "Specialized Pain Conditions": ["Complex Regional Pain Syndrome", "Coccygodynia", "SI Joint dysfunction"]
     };
 
-    // Wikidata Universal Entity IDs
     const wikidataMap: Record<string, string> = {
-      "Back Pain": "http://www.wikidata.org/entity/Q186356",
-      "Neck Pain": "http://www.wikidata.org/entity/Q123456",
-      "Sciatica & Leg Pain": "http://www.wikidata.org/entity/Q193633",
-      "Slip Disc (Herniated Disc)": "http://www.wikidata.org/entity/Q551676",
-      "Spinal Stenosis": "http://www.wikidata.org/entity/Q1048831",
-      "Joint & Arthritis Pain": "http://www.wikidata.org/entity/Q191924"
+      "Spine & Nerve Pain": "http://www.wikidata.org/entity/Q186356",
+      "Joint & Musculoskeletal Pain": "http://www.wikidata.org/entity/Q191924",
+      "Nerve-Related Pain": "http://www.wikidata.org/entity/Q193633",
+      "Chronic Pain": "http://www.wikidata.org/entity/Q1093108",
+      "Head & Facial Pain": "http://www.wikidata.org/entity/Q7075",
+      "Cancer & Palliative Pain": "http://www.wikidata.org/entity/Q1052304",
+      "Specialized Pain Conditions": "http://www.wikidata.org/entity/Q17142422"
     };
 
-    // Wikidata Citations & Health Portals
     const citationMap: Record<string, string[]> = {
-      "Back Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/back-pain", "http://www.wikidata.org/entity/Q186356"],
-      "Neck Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/neck-pain", "http://www.wikidata.org/entity/Q123456"],
-      "Sciatica & Leg Pain": ["https://www.nhp.gov.in/disease/neurological/sciatica", "http://www.wikidata.org/entity/Q193633"],
-      "Slip Disc (Herniated Disc)": ["https://en.wikipedia.org/wiki/Spinal_disc_herniation", "http://www.wikidata.org/entity/Q551676"],
-      "Spinal Stenosis": ["https://en.wikipedia.org/wiki/Spinal_stenosis", "http://www.wikidata.org/entity/Q1048831"],
-      "Joint & Arthritis Pain": ["https://www.nhp.gov.in/disease/musculo-skeletal/arthritis", "http://www.wikidata.org/entity/Q191924"]
+      "Spine & Nerve Pain": ["https://www.who.int/news-room/fact-sheets/detail/low-back-pain", "http://www.wikidata.org/entity/Q186356"],
+      "Chronic Pain": ["https://www.iasp-pain.org/resources/terminology/", "http://www.wikidata.org/entity/Q1093108"],
+      "Head & Facial Pain": ["https://ichd-3.org/", "http://www.wikidata.org/entity/Q7075"]
     };
 
     return {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
+      "lastReviewed": "2026-02-01",
+      "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "name": `Best ${section.title} clinic in Hyderabad`,
       "about": {
         "@type": "Place",
@@ -193,8 +193,8 @@ const Conditions = () => {
     <Layout>
       <SEO
         title="Sciatica, Slip Disc & Back Pain Treatment in Hyderabad | Nirvana Spine"
-        description="Comprehensive treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced non-surgical pain management for lasting relief by Dr Vamshi Bharadwaj."
-        keywords="sciatica treatment hyderabad, slip disc treatment hyderabad, back pain relief hyderabad, neck pain specialist hyderabad, spine clinic jubilee hills, best pain clinic hyderabad"
+        description="Comprehensive non-surgical treatment for Sciatica, Slip Disc, Back Pain, and Neck Pain in Hyderabad. Advanced pain management for lasting relief by Dr Vamshi Bharadwaj."
+        keywords="sciatica treatment hyderabad, slip disc treatment hyderabad, back pain relief hyderabad, neck pain specialist hyderabad, spine clinic jubilee hills, best pain clinic hyderabad, non-surgical sciatica relief, trigeminal neuralgia hyderabad, CRPS treatment Telangana, failed back surgery syndrome relief, disc prolapse treatment without surgery"
         schema={medicalSchema}
         breadcrumbs={[
           { name: "Home", item: "/" },

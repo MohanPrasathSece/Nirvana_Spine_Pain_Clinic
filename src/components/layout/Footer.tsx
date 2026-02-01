@@ -2,8 +2,25 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
+  const footerschema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Nirvana Spine & Pain Clinic Site Navigation",
+    "itemListElement": [
+      { "@type": "SiteNavigationElement", "position": 1, "name": "Home", "url": "https://nirvanapainclinic.com/" },
+      { "@type": "SiteNavigationElement", "position": 2, "name": "About Us", "url": "https://nirvanapainclinic.com/about" },
+      { "@type": "SiteNavigationElement", "position": 3, "name": "Conditions", "url": "https://nirvanapainclinic.com/conditions" },
+      { "@type": "SiteNavigationElement", "position": 4, "name": "Treatments", "url": "https://nirvanapainclinic.com/treatment" },
+      { "@type": "SiteNavigationElement", "position": 5, "name": "Gallery", "url": "https://nirvanapainclinic.com/gallery" },
+      { "@type": "SiteNavigationElement", "position": 6, "name": "Contact", "url": "https://nirvanapainclinic.com/contact" }
+    ]
+  };
+
   return (
     <footer className="bg-foreground text-primary-foreground">
+      <script type="application/ld+json" className="dynamic-schema">
+        {JSON.stringify(footerschema)}
+      </script>
       <div className="container-medical section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}

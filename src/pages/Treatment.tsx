@@ -87,20 +87,20 @@ const treatmentSections = [
 
 const Treatment = () => {
   const treatmentSchema = treatmentSections.map(section => {
-    // SNOMED-CT codes for procedures
+    // God-Tier Clinical Procedure Mappings (ICD-11 / SNOMED)
     const codeMap: Record<string, string> = {
-      "Epidural Injections": "SNOMED-CT: 230862001",
-      "Nerve Blocks": "SNOMED-CT: 50731000",
-      "Radiofrequency Ablation": "SNOMED-CT: 444315007",
-      "Physiotherapy & Rehabilitation": "SNOMED-CT: 91251008"
+      "Advanced Spine Injections": "ICD-11: 1B30, SNOMED-CT: 230862001",
+      "Neuropathic Pain Procedures": "ICD-11: 1B31, SNOMED-CT: 50731000",
+      "Regenerative & Joint Procedures": "ICD-11: 1C20, SNOMED-CT: 444315007",
+      "Advanced Pain Technology": "ICD-11: 1C22, SNOMED-CT: 432322007"
     };
 
-    // Wikidata codes for procedures
+    // Global Procedure Entities
     const wikidataMap: Record<string, string> = {
-      "Epidural Injections": "http://www.wikidata.org/entity/Q610996",
-      "Nerve Blocks": "http://www.wikidata.org/entity/Q699661",
-      "Radiofrequency Ablation": "http://www.wikidata.org/entity/Q2126442",
-      "Physiotherapy & Rehabilitation": "http://www.wikidata.org/entity/Q211116"
+      "Advanced Spine Injections": "http://www.wikidata.org/entity/Q610996",
+      "Neuropathic Pain Procedures": "http://www.wikidata.org/entity/Q699661",
+      "Regenerative & Joint Procedures": "http://www.wikidata.org/entity/Q2126442",
+      "Advanced Pain Technology": "http://www.wikidata.org/entity/Q1052304"
     };
 
     return {
@@ -110,6 +110,7 @@ const Treatment = () => {
       "description": section.description,
       "code": codeMap[section.title] || "",
       "sameAs": wikidataMap[section.title] || "",
+      "lastReviewed": "2026-02-01",
       "author": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "reviewedBy": { "@id": "https://nirvanapainclinic.com/#doctor" },
       "procedureType": {
@@ -132,8 +133,8 @@ const Treatment = () => {
     <Layout>
       <SEO
         title="Non-Surgical Spine Care & Pain Procedures in Hyderabad | Nirvana Spine"
-        description="Top-rated non-surgical spine and joint pain procedures in Hyderabad. We offer minimally invasive treatments including RF Ablation, Nerve Blocks, and Epidural Injections."
-        keywords="pain management hyderabad, non-surgical spine treatment hyderabad, radiofrequency ablation hyderabad, interventional pain management, nerve block treatment hyderabad"
+        description="Top-rated non-surgical spine and joint pain procedures in Hyderabad. Specialized treatments including RF Ablation, Nerve Blocks, and Epidural Injections by expert specialists."
+        keywords="pain management hyderabad, non-surgical spine treatment hyderabad, radiofrequency ablation hyderabad, interventional pain management, nerve block treatment hyderabad, spinal injection specialist"
         schema={treatmentSchema}
         breadcrumbs={[
           { name: "Home", item: "/" },

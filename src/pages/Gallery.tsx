@@ -87,9 +87,9 @@ const Gallery = () => {
     return (
         <Layout>
             <SEO
-                title="Clinic Gallery | Top Facilities & Procedures in Hyderabad | Nirvana Spine"
-                description="View our state-of-the-art pain clinic facilities and advanced interventional procedure rooms in Hyderabad. See how we treat spine conditions."
-                keywords="Pain Clinic Gallery Hyderabad, Spine Treatment Photos, Nirvana Spine Clinic Facilities"
+                title="Clinic Gallery | Best Spine & Pain Management Center in Hyderabad"
+                description="View our state-of-the-art pain clinic facilities and advanced interventional procedure rooms in Hyderabad. Guided tour of Nirvana Spine & Pain Clinic."
+                keywords="pain clinic gallery hyderabad, spine treatment facilities, nirvana pain clinic photos, best pain center infrastructure, kokapet clinic gallery"
                 schema={[gallerySchema, ...procedureSchemas]}
                 type="MedicalWebPage"
                 breadcrumbs={[

@@ -12,8 +12,8 @@ const Index = () => {
     <Layout>
       <SEO
         title="Best Pain Clinic in Hyderabad | Nirvana Spine & Pain Clinic | Dr Vamshi Bharadwaj"
-        description="Nirvana Spine & Pain Clinic is the #1 rated pain management center in Kokapet, Hyderabad. Expert treatment for back pain, sciatica, and slip disc at Radha Spaces."
-        keywords="best clinic in hyderabad, best pain clinic in kokapet, spine specialist gandipet, back pain treatment kokapet, sciatica treatment hyderabad, slip disc treatment gandipet, dr vamshi bharadwaj, nirvana spine and pain clinic kokapet"
+        description="Nirvana Spine & Pain Clinic is the #1 top-rated pain management center in Kokapet, Hyderabad. Expert non-surgical treatment for back pain, sciatica, and slip disc."
+        keywords="best pain clinic in hyderabad, best pain clinic in kokapet, spine specialist gandipet, back pain treatment hyderabad, sciatica treatment hyderabad, slip disc treatment gandipet, dr vamshi bharadwaj, nirvana spine and pain clinic hyderabad, non-surgical spine care, ozone discectomy hyderabad, stellate ganglion block, trigeminal neuralgia treatment hyderabad, epidural steroid injections kokapet"
         type="MedicalWebPage"
         breadcrumbs={[
           { name: "Home", item: "/" }

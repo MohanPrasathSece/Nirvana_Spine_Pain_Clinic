@@ -104,8 +104,8 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Contact Us | Book Appointment at Best Pain Clinic in Hyderabad"
-        description="Book your consultation with Dr Vamshi Bharadwaj at Nirvana Spine & Pain Clinic, the leading pain management center in Hyderabad. Visit us for expert spine care."
-        keywords="Book Appointment Pain Clinic Hyderabad, Contact Spine Specialist Hyderabad, Dr Vamshi Bharadwaj Contact"
+        description="Book your consultation with Dr Vamshi Bharadwaj at Nirvana Spine & Pain Clinic, the top-rated pain management center in Hyderabad. Visit us for expert spine care."
+        keywords="book appointment pain clinic hyderabad, contact spine specialist hyderabad, dr vamshi bharadwaj contact, kokapet pain clinic contact, best pain doctor hyderabad book appointment"
         schema={faqSchema}
         type="ContactPage"
         breadcrumbs={[

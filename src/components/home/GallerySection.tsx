@@ -36,7 +36,7 @@ const GallerySection = () => {
                         >
                             <img
                                 src={item.src}
-                                alt={item.title}
+                                alt={`${item.title} at Nirvana Spine & Pain Clinic Hyderabad - Best Pain Management Specialist`}
                                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
