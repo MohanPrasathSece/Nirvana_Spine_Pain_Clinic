@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Phone, ChevronRight } from "lucide-react";
+import { Menu, Phone, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -110,13 +110,21 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-muted-foreground hover:text-foreground"
+                  className="text-muted-foreground hover:text-foreground h-14 w-14"
                 >
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-9 h-9" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </DrawerTrigger>
               <DrawerContent className="max-h-[90vh] outline-none">
+                <div className="absolute right-4 top-4 z-10">
+                  <DrawerClose asChild>
+                    <Button variant="ghost" size="icon" className="rounded-full h-10 w-10">
+                      <X className="w-6 h-6" />
+                      <span className="sr-only">Close menu</span>
+                    </Button>
+                  </DrawerClose>
+                </div>
                 <DrawerHeader className="text-left pt-6 pb-2">
                   <DrawerTitle className="text-2xl font-heading font-bold text-center">
                     Menu

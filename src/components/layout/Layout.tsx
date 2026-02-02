@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="flex min-h-screen flex-col">
       <ScrollToHash />
       <Header />
-      <main className="flex-1 px-4 md:px-0">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

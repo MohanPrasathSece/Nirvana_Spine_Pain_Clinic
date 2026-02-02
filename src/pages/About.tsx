@@ -172,14 +172,10 @@ const About = () => {
             {stats.map((stat, idx) => (
               <div key={idx} className="text-center">
                 <p className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-2">
-                  {stat.label === "Years of Experience" ? (
-                    "Years of"
-                  ) : (
-                    <Counter value={stat.value} suffix={stat.suffix} />
-                  )}
+                  <Counter value={stat.value} suffix={stat.suffix} />
                 </p>
                 <p className="text-primary-foreground/70">
-                  {stat.label === "Years of Experience" ? "Experience" : stat.label}
+                  {stat.label}
                 </p>
               </div>
             ))}

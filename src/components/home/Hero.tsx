@@ -57,17 +57,17 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="mt-12 grid grid-cols-3 gap-4 md:gap-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             {[
               { label: "Treatments", value: "500", suffix: "+" },
               { label: "Patients", value: "1000", suffix: "+" },
               { label: "Success Rate", value: "95", suffix: "%" },
             ].map((stat, idx) => (
               <div key={idx} className="flex flex-col">
-                <p className="text-sm font-medium text-muted-foreground mb-1">
+                <p className="text-xs md:text-sm font-medium text-muted-foreground mb-1">
                   {stat.label}
                 </p>
-                <p className="text-3xl md:text-4xl font-heading font-bold text-primary">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                   <Counter value={parseInt(stat.value)} suffix={stat.suffix} />
                 </p>
               </div>
