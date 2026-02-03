@@ -103,6 +103,7 @@ const Conditions = () => {
       "Nerve-Related Pain": "ICD-11: 8B92, SNOMED-CT: 23056005",
       "Chronic Pain": "ICD-11: MG30.0, SNOMED-CT: 82423001",
       "Head & Facial Pain": "ICD-11: 8E43.0, SNOMED-CT: 25064002",
+      
       "Cancer & Palliative Pain": "ICD-11: MG30.1, SNOMED-CT: 404640003",
       "Specialized Pain Conditions": "ICD-11: 8E49, SNOMED-CT: 400003000"
     };

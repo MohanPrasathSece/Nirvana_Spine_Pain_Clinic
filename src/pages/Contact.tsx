@@ -81,23 +81,67 @@ const Contact = () => {
     message: "",
   });
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message! We'll get back to you soon.");
-    setContactForm({ name: "", email: "", phone: "", message: "" });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...contactForm,
+          type: 'contact',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Thank you for your message! We'll get back to you soon.");
+        setContactForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
 
-  const handleAppointmentSubmit = (e: React.FormEvent) => {
+  const handleAppointmentSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Appointment request submitted! We'll confirm your booking shortly.");
-    setAppointmentForm({
-      name: "",
-      email: "",
-      phone: "",
-      condition: "",
-      date: "",
-      message: "",
-    });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...appointmentForm,
+          type: 'appointment',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Appointment request submitted! We'll confirm your booking shortly.");
+        setAppointmentForm({
+          name: "",
+          email: "",
+          phone: "",
+          condition: "",
+          date: "",
+          message: "",
+        });
+      } else {
+        toast.error("Failed to submit request. Please try again or call us directly.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
 
   return (
