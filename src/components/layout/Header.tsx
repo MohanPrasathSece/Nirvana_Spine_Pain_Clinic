@@ -61,7 +61,7 @@ const Header = () => {
             <img
               src="/new logo.png"
               alt="Nirvana Spine & Pain Clinic Logo"
-              className="h-10 w-auto md:h-14"
+              className="h-14 w-auto md:h-16"
             />
           </Link>
 
