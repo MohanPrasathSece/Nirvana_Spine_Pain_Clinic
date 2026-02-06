@@ -20,7 +20,7 @@ const SEO = ({
     breadcrumbs,
     canonical,
     type = "MedicalWebPage",
-    primaryImage = "https://nirvanapainclinic.com/logo-nobg.png",
+    primaryImage = "https://nirvanapainclinic.com/new logo.png",
     noindex = false
 }: SEOProps) => {
     useEffect(() => {
@@ -90,8 +90,8 @@ const SEO = ({
             "logo": {
                 "@type": "ImageObject",
                 "@id": `${baseUrl}/#logo`,
-                "url": `${baseUrl}/logo-nobg.png`,
-                "contentUrl": `${baseUrl}/logo-nobg.png`,
+                "url": `${baseUrl}/new logo.png`,
+                "contentUrl": `${baseUrl}/new logo.png`,
                 "caption": "Nirvana Spine & Pain Clinic",
                 "inLanguage": "en-IN",
                 "width": 512,

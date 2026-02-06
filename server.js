@@ -27,6 +27,10 @@ const transporter = nodemailer.createTransport({
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
     },
+    secure: true, // use SSL
+    tls: {
+        rejectUnauthorized: false // Accept self-signed certificates (for development)
+    }
 });
 
 app.post('/api/send-email', async (req, res) => {

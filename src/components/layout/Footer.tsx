@@ -25,16 +25,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
-            <Link to="/" className="flex items-center gap-3 mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <img
-                src="/logo-nobg.png"
+                src="/new logo.png"
                 alt="Nirvana Spine & Pain Clinic Logo"
                 className="h-16 w-auto"
               />
-              <div className="flex flex-col">
-                <span className="font-heading text-lg font-bold text-primary-foreground leading-tight">Nirvana</span>
-                <span className="text-xs text-primary-foreground/70">Spine & Pain Clinic</span>
-              </div>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Expert spine care and pain management in Hyderabad.

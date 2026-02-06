@@ -57,20 +57,12 @@ const Header = () => {
       <nav className="container-medical" aria-label="Global">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             <img
-              src="/logo-nobg.png"
+              src="/new logo.png"
               alt="Nirvana Spine & Pain Clinic Logo"
               className="h-10 w-auto md:h-14"
             />
-            <div className="hidden sm:block">
-              <span className="font-heading text-lg font-semibold text-foreground leading-tight block">
-                Nirvana
-              </span>
-              <span className="text-xs text-muted-foreground block">
-                Spine & Pain Clinic
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

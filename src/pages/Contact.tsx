@@ -12,12 +12,19 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Youtube, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
@@ -81,8 +88,29 @@ const Contact = () => {
     message: "",
   });
 
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [confirmationType, setConfirmationType] = useState<"contact" | "appointment">("contact");
+
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number>(() => {
+    const saved = localStorage.getItem("last_form_submission");
+    return saved ? parseInt(saved, 10) : 0;
+  });
+
+  const checkCooldown = () => {
+    const now = Date.now();
+    const cooldownPeriod = 2 * 60 * 1000; // 2 minutes in ms
+    if (now - lastSubmissionTime < cooldownPeriod) {
+      const remainingSeconds = Math.ceil((cooldownPeriod - (now - lastSubmissionTime)) / 1000);
+      toast.error(`Please wait ${remainingSeconds} seconds before submitting again.`);
+      return false;
+    }
+    return true;
+  };
+
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!checkCooldown()) return;
+
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -98,7 +126,12 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Thank you for your message! We'll get back to you soon.");
+        const now = Date.now();
+        setLastSubmissionTime(now);
+        localStorage.setItem("last_form_submission", now.toString());
+
+        setConfirmationType("contact");
+        setShowConfirmation(true);
         setContactForm({ name: "", email: "", phone: "", message: "" });
       } else {
         toast.error("Failed to send message. Please try again or call us directly.");
@@ -111,6 +144,8 @@ const Contact = () => {
 
   const handleAppointmentSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!checkCooldown()) return;
+
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -126,7 +161,12 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Appointment request submitted! We'll confirm your booking shortly.");
+        const now = Date.now();
+        setLastSubmissionTime(now);
+        localStorage.setItem("last_form_submission", now.toString());
+
+        setConfirmationType("appointment");
+        setShowConfirmation(true);
         setAppointmentForm({
           name: "",
           email: "",
@@ -277,7 +317,7 @@ const Contact = () => {
             {/* Right: Map */}
             <div className="h-[400px] lg:h-auto w-full bg-secondary relative min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3711518715855!2d78.41155671487756!3d17.43517098804678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90ce7e1b7e89%3A0x6a5c3d2e1d2f7c3b!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1629794729807!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29149.9566358178!2d78.30939892586557!3d17.395402270040552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb958f483d57bb%3A0xd903964af9ef3942!2sRADHA%20SPACES!5e1!3m2!1sen!2sin!4v1770345883429!5m2!1sen!2sin"
                 className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
@@ -522,6 +562,29 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      {/* Confirmation Modal */}
+      <Dialog open={showConfirmation} onOpenChange={setShowConfirmation}>
+        <DialogContent className="sm:max-w-md text-center p-12">
+          <DialogHeader className="flex flex-col items-center">
+            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <CheckCircle2 className="w-12 h-12 text-primary" />
+            </div>
+            <DialogTitle className="text-3xl font-heading font-bold mb-2">
+              Submission Successful!
+            </DialogTitle>
+            <DialogDescription className="text-lg text-muted-foreground whitespace-pre-line">
+              {confirmationType === "appointment"
+                ? "Your appointment request has been received.\nOur team will contact you shortly to confirm your slot."
+                : "Thank you for reaching out to us.\nWe have received your message and will get back to you soon."}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-8">
+            <Button onClick={() => setShowConfirmation(false)} className="w-full h-12 text-lg rounded-full">
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 };
