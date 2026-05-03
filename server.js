@@ -13,6 +13,14 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
 // Enable CORS for all routes (useful for development if proxy isn't used, but good practice)
 app.use(cors());
 app.use(express.json());
@@ -78,13 +86,20 @@ app.post('/api/send-email', async (req, res) => {
     };
 
     try {
-        await transporter.verify(); // Verify connection first
         const info = await transporter.sendMail(mailOptions);
-        console.log('Email sent:', info.messageId);
-        res.status(200).json({ success: true, message: 'Email sent successfully' });
+        console.log('Email sent successfully:', info.messageId);
+        res.status(200).json({ 
+            success: true, 
+            message: 'Email sent successfully',
+            messageId: info.messageId 
+        });
     } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).json({ success: false, message: 'Failed to send email', error: error.message });
+        res.status(500).json({ 
+            success: false, 
+            message: 'Failed to send email', 
+            error: error.message 
+        });
     }
 });
 
@@ -94,6 +109,12 @@ app.get(/(.*)/, (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`Server is running on port ${PORT}`);
+    try {
+        await transporter.verify();
+        console.log('SMTP connection verified successfully');
+    } catch (err) {
+        console.error('SMTP connection verification failed:', err);
+    }
 });

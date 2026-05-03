@@ -24,7 +24,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Youtube, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Calendar, Facebook, Instagram, Youtube, CheckCircle2, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
@@ -90,6 +90,8 @@ const Contact = () => {
 
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [confirmationType, setConfirmationType] = useState<"contact" | "appointment">("contact");
+  const [isSubmittingContact, setIsSubmittingContact] = useState(false);
+  const [isSubmittingAppointment, setIsSubmittingAppointment] = useState(false);
 
   const [lastSubmissionTime, setLastSubmissionTime] = useState<number>(() => {
     const saved = localStorage.getItem("last_form_submission");
@@ -111,6 +113,7 @@ const Contact = () => {
     e.preventDefault();
     if (!checkCooldown()) return;
 
+    setIsSubmittingContact(true);
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -123,7 +126,21 @@ const Contact = () => {
         }),
       });
 
-      const data = await response.json();
+      if (!response.ok) {
+        console.error('Server error:', response.status);
+        const text = await response.text();
+        console.error('Response body:', text);
+        toast.error("Failed to send message. Server returned an error.");
+        return;
+      }
+ 
+      let data;
+      try {
+        data = await response.json();
+      } catch (parseError) {
+        console.error('Failed to parse JSON response');
+        throw new Error('Failed to parse response');
+      }
 
       if (data.success) {
         const now = Date.now();
@@ -139,6 +156,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmittingContact(false);
     }
   };
 
@@ -146,6 +165,7 @@ const Contact = () => {
     e.preventDefault();
     if (!checkCooldown()) return;
 
+    setIsSubmittingAppointment(true);
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -158,7 +178,21 @@ const Contact = () => {
         }),
       });
 
-      const data = await response.json();
+      if (!response.ok) {
+        console.error('Server error:', response.status);
+        const text = await response.text();
+        console.error('Response body:', text);
+        toast.error("Failed to submit request. Server returned an error.");
+        return;
+      }
+
+      let data;
+      try {
+        data = await response.json();
+      } catch (parseError) {
+        console.error('Failed to parse JSON response');
+        throw new Error('Failed to parse response');
+      }
 
       if (data.success) {
         const now = Date.now();
@@ -181,6 +215,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmittingAppointment(false);
     }
   };
 
@@ -454,8 +490,15 @@ const Contact = () => {
                     rows={3}
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Request Appointment
+                <Button type="submit" className="w-full" disabled={isSubmittingAppointment}>
+                  {isSubmittingAppointment ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    "Request Appointment"
+                  )}
                 </Button>
               </form>
             </div>
@@ -528,8 +571,15 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isSubmittingContact}>
+                  {isSubmittingContact ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </div>
