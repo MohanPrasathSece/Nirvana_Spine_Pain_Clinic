@@ -17,9 +17,9 @@ export const blogsData: BlogPost[] = [
   {
     id: "best-non-surgical-treatment-sciatica",
     title: "Best Non-Surgical Treatment for Sciatica in Hyderabad",
-    excerpt: "Sciatica is one of the most common causes of leg pain, often starting in the lower back and radiating down the leg. Many patients in Hyderabad assume surgery is the only solution—but that's not true.",
+    excerpt: "Sciatica is one of the most common causes of leg pain, often starting in the lower back and radiating down the leg. Many patients in Hyderabad assume surgery is the only solution - but that's not true.",
     content: `
-      <p>Sciatica is one of the most common causes of leg pain, often starting in the lower back and radiating down the leg. Many patients in Hyderabad assume surgery is the only solution—but that’s not true.</p>
+      <p>Sciatica is one of the most common causes of leg pain, often starting in the lower back and radiating down the leg. Many patients in Hyderabad assume surgery is the only solution - but that’s not true.</p>
       
       <p>At Nirvana Spine & Pain Clinic, Kokapet, advanced non-surgical treatments for sciatica help patients recover faster with minimal downtime.</p>
       
