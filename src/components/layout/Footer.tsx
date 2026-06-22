@@ -12,7 +12,8 @@ const Footer = () => {
       { "@type": "SiteNavigationElement", "position": 3, "name": "Conditions", "url": "https://nirvanapainclinic.com/conditions" },
       { "@type": "SiteNavigationElement", "position": 4, "name": "Treatments", "url": "https://nirvanapainclinic.com/treatment" },
       { "@type": "SiteNavigationElement", "position": 5, "name": "Gallery", "url": "https://nirvanapainclinic.com/gallery" },
-      { "@type": "SiteNavigationElement", "position": 6, "name": "Contact", "url": "https://nirvanapainclinic.com/contact" }
+      { "@type": "SiteNavigationElement", "position": 6, "name": "Blogs", "url": "https://nirvanapainclinic.com/blogs" },
+      { "@type": "SiteNavigationElement", "position": 7, "name": "Contact", "url": "https://nirvanapainclinic.com/contact" }
     ]
   };
 
@@ -92,6 +93,7 @@ const Footer = () => {
                 { name: "Conditions", href: "/conditions" },
                 { name: "Treatments", href: "/treatment" },
                 { name: "Gallery", href: "/gallery" },
+                { name: "Blogs", href: "/blogs" },
                 { name: "Book Appointment", href: "/contact#book-appointment" },
               ].map((link) => (
                 <li key={link.name}>

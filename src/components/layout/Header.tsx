@@ -19,6 +19,7 @@ const navigation = [
   { name: "Conditions", href: "/conditions" },
   { name: "Treatments", href: "/treatment" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "/contact" },
 ];
 
