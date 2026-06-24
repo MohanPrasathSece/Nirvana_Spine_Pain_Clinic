@@ -34,7 +34,7 @@ const Blogs = () => {
           <div className="container-medical">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogsData.map((blog) => (
-                <Link to={`/blogs/${blog.id}`} key={blog.id} className="group bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col block">
+                <Link to={`/blogs/${blog.id}`} key={blog.id} className="group bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
                   {/* Image */}
                   <div className="aspect-video w-full overflow-hidden relative">
                     <img

@@ -14,7 +14,7 @@ const BlogPost = () => {
   const blog = blogsData.find((b) => b.id === id);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [id]);
 
   if (!blog) {
@@ -56,7 +56,7 @@ const BlogPost = () => {
               <span className="inline-block bg-primary text-primary-foreground text-sm font-semibold px-4 py-1 rounded-full mb-6">
                 {blog.category}
               </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white max-w-4xl mx-auto leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white max-w-4xl mx-auto mb-6" style={{ lineHeight: 1.5 }}>
                 {blog.title}
               </h1>
               
@@ -87,10 +87,15 @@ const BlogPost = () => {
               </Button>
 
               {/* Content */}
-              <div 
-                className="prose md:prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-h3:text-xl md:prose-h3:text-2xl prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-xl px-4 md:px-0"
-                dangerouslySetInnerHTML={{ __html: blog.content }}
-              />
+              <div className="px-4 md:px-0">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-foreground" style={{ lineHeight: 1.4 }}>
+                  {blog.title}
+                </h2>
+                <div 
+                  className="prose md:prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-h3:text-xl md:prose-h3:text-2xl prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-xl"
+                  dangerouslySetInnerHTML={{ __html: blog.content }}
+                />
+              </div>
 
               {/* Author Bio (Optional) */}
               <div className="mt-12 md:mt-16 p-6 md:p-8 bg-primary/5 rounded-2xl flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 mx-4 md:mx-0">
